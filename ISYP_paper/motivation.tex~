@@ -1,0 +1,60 @@
+\section{Motivations \& Problem Statement}
+\label{sec-motive}
+
+Agent-based modeling frameworks necessarily place the agent as the fundamental 
+abstraction. This is true in \cyclus as well. However, many problems that are 
+solved with an \gls{ABM} approach are sufficiently represented by one or two 
+agents \cite{taylor2014agent}. However, in nuclear fuel cycle simulations there is
+a proliferation of facility types that are distinct both conceptually and in the 
+kinds of physical processes that they implement. While it would be \emph{possible}
+to merge all facility types into a single, highly parameterized agent model,
+it would be \emph{unwise} to do so. Facilities that model fundamentally different
+physics should not be combined into a single class. Not only is it more work to 
+combine them but it is also less intelligible. The same reasoning applies to why it is 
+not a good idea to merge the concepts of institutions and regions with that of
+facilities; the subject of the model is fundamentally distinct from other models
+and this separation of concerns should be maintained.
+
+So unlike other agent-based frameworks, the modularity of \cyclus drives 
+an ecosystem of \emph{archetypes}. An archetype is an agent class that specifies 
+how the agent should behave via its own implementation of physics, chemistry, 
+economic, and social policies. Archetypes are parameterized only in ways that 
+make sense to the policies that they implement. Extraneous policies are left to 
+other archetypes. For example, a nuclear reactor would not be parameterized based 
+on separation efficiencies capacity, that would be left for a reprocessing facility.
+
+All archetypes are agents. They are able to communicate (through resource 
+exchange) with all other agents and they have access to the same information 
+about the environment in which they live. The archetype abstraction provides
+speciation of agents so that each archetype may fill its own fuel cycle niche.
+
+Archetypes are an essential abstraction layered on top of the agent abstraction. 
+Fuel cycle facility, region, and institution modelers should directly create
+archetypes rather than raw agents. Thus for people trying to create, use, and 
+extend \cyclus agents, archetypes should be their entry and exit point. Because this 
+concept is central to how \cyclus works, such users are known as \emph{archetype
+developers}.
+
+The archetype abstraction has the added advantage that archetype developers 
+need only be specialists in the field of the archetype that they are developing.
+Someone who knowledgeable about gaseous centrifuges could design 
+an enrichment facility. A person that studies deep geologic repositories
+could model a long-term storage facility. A reactor physicist could create 
+a suite of archetypes for various reactor technologies. In this way, an ecosystem 
+of archetypes from representative experts can be built up. Since one does not need
+to be an expert to use an archetype, a well-developed ecosystem will provide 
+a huge benefit to everyone. The separation of concerns provided by the archetype 
+abstraction maximizes quality over the entire fuel cycle modeling process.
+
+Still, for any simulator to be successful its key abstractions must be both easily 
+configured by users and easily modified by developers.  If these activities are 
+too difficult, the barrier to entry for new users and developers will be 
+insurmountable in a reasonable time frame. Otherwise, potential new users and developers will 
+walk away in confusion and frustration. For \cyclus, archetype development
+needs to have first-class support.
+
+This paper discusses how the \cyclus code base has overcome the inherent limitations
+of its design goals in order 
+to provide a fertile platform on which to model the nuclear fuel cycle.
+Such strategies can apply to any and all agent-based fuel cycle simulators, of which 
+there is currently only \cyclus.
