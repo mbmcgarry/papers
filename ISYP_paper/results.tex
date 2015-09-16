@@ -1,10 +1,6 @@
-\section{Technical Results}
+\section{Diversion of Highly Enriched Uranium}
 \label{s_results}
-
-\subsection{\gls{HEU} Diversion}
-\label{s_heu}
-\Cyclus has been used to incorporate social-behavioral modeling into simulations
-of \gls{HEU} diversion from a declared fuel cycle.  In the simplest implementation, material is diverted at the enrichment facility.  Figure \ref{fig:heu_layout} illustrates a toy model of this portion of the fuel cycle. A facility such as a mine supplies natural \gls{U} (0.7\% $^{235}$U) to an enrichment facility.  The enrichment facility in turn receives requests for 4\% enriched \gls{LEU} from a declared light-water reactor (ignoring the fuel fabrication facility for simplicity).  The enrichment facility also receives requests for 90\% enriched \gls{HEU} from an undeclared actor seeking to build a nuclear weapon. Material flow, or throughput, out of each facility is is calculated once each month for a total of 100 months.  This framework allows us to pose the following question: If an inspector only has access to the inventory records for LEU arriving at the delared reactor, can diversion of material be identified?
+As a part of the \gls{CVT}, \Cyclus has been used to incorporate social-behavioral modeling into simulations of \gls{HEU} diversion from a declared fuel cycle.  In the simplest implementation, material is diverted at the enrichment facility.  Figure \ref{fig:heu_layout} illustrates a toy model of this portion of the fuel cycle. A facility such as a mine supplies natural \gls{U} (0.7\% $^{235}$U) to an enrichment facility.  The enrichment facility in turn receives requests for 4\% enriched \gls{LEU} from a declared light-water reactor (ignoring the fuel fabrication facility for simplicity).  The enrichment facility also receives requests for 90\% enriched \gls{HEU} from an undeclared actor seeking to build a nuclear weapon. Material flow, or throughput, out of each facility is is calculated once each month for a total of 100 months.  This framework allows us to pose the following question: If an inspector only has access to the inventory records for LEU arriving at the delared reactor, can diversion of material be identified?
 
 \begin{figure}%[htbp!]
 \begin{center}
