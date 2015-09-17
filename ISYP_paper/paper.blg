@@ -1,12 +1,26 @@
 This is BibTeX, Version 0.99d (TeX Live 2014)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: paper.aux
+White space in argument---line 21 of file paper.aux
+ : \citation{zero_knowledge
+ :                          concerns}
+I'm skipping whatever remains of this command
 The style file: ans.bst
-I found no \citation commands---while reading file paper.aux
-Database file #1: ../Master.bib
+Database file #1: /Users/mbmcgarry/git/papers/zotero_150917.bib
+Database file #2: /Users/mbmcgarry/git/papers/isyp_local.bib
+Warning--I didn't find a database entry for "weapons_states"
+Warning--I didn't find a database entry for "benefits_of_nuc_power"
+Warning--I didn't find a database entry for "power_stats"
+Warning--I didn't find a database entry for "us_reprocessing???"
+Warning--I didn't find a database entry for "weapons_grade_den"
+Warning--I didn't find a database entry for "countries_that_reprocess"
+Warning--I didn't find a database entry for "http://www.un.org/disarmament/WMD/Nuclear/NPT.shtml"
+Warning--I didn't find a database entry for "https://www.armscontrol.org/factsheets/fmct"
+Warning--I didn't find a database entry for "cyclus_origins"
+Warning--I didn't find a database entry for "HERO_research"
 You've used 0 entries,
             2031 wiz_defined-function locations,
-            446 strings with 2900 characters,
+            459 strings with 3260 characters,
 and the built_in function-call counts, 18 in all, are:
 = -- 0
 > -- 0
