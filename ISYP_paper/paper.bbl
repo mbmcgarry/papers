@@ -1,3 +1,47 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{feiveson_unmaking_2014}
+H.~A. FEIVESON, A.~GLASER, Z.~MIAN, and F.~N. V.~V. HIPPEL,
+\newblock {\em Unmaking the {Bomb}: {A} {Fissile} {Material} {Approach} to
+  {Nuclear} {Disarmament} and {Nonproliferation}},
+\newblock The MIT Press, Cambridge, Massachusetts (2014).
+
+\bibitem{mooney_why_2014}
+C.~MOONEY,
+\newblock ``Why climate change is forcing some environmentalists to back
+  nuclear power,''
+\newblock {\em The Washington Post} (2014).
+
+\bibitem{cyclus_v1_0}
+R.~W. CARLSEN et~al.,
+\newblock ``{Cyclus v1.0.0},''
+\newblock (2014),
+\newblock http://dx.doi.org/10.6084/m9.figshare.1041745.
+
+\bibitem{cyclus_v1_2}
+R.~CARLSEN, R.~FLANAGAN, M.~GIDDEN, A.~SCOPATZ, and J.~D. XIA,
+\newblock ``{Cyclus v1.2.0},''
+\newblock (2014),
+\newblock http://dx.doi.org/10.6084/m9.figshare.1256424.
+
+\bibitem{cyclus_v1_3}
+R.~CARLSEN et~al.,
+\newblock ``{Cyclus v1.3.0},''
+\newblock (2015).
+
+\bibitem{jennings2000agent}
+N.~R. JENNINGS,
+\newblock ``On agent-based software engineering,''
+\newblock {\em Artificial intelligence}, {\bf 117}, 277 (2000).
+
+\bibitem{taylor2014agent}
+S.~TAYLOR,
+\newblock {\em Agent-based Modeling and Simulation},
+\newblock Palgrave Macmillan (2014).
+
+\bibitem{scopatz_cymetric_2015}
+A.~SCOPATZ, A.~OPOTOWSKY, and P.~P.~H. WILSON,
+\newblock ``Cymetric - {A} {Fuel} {Cycle} {Metrics} {Tool} for {Cyclus},''
+\newblock 2015.
 
 \end{thebibliography}
