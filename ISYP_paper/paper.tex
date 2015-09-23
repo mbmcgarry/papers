@@ -1,25 +1,11 @@
-\documentclass{ntmanuscript}
+%\documentclass{proc}  % 2-column format
+\documentclass[12pt]{paper}
+%\documentclass{ntmanuscript}
+%\documentclass[review]{elsarticle}
 \usepackage[acronym,toc]{glossaries}
 \include{acros}
 %\makeglossaries
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Modeling Material Diversion with the Cyclus Nuclear Fuel Cycle Simulator
-}
-
-% Authors. Separated by commas
-\input{authors}
-
-% Institutes of the authors
-\input{institutions}
-
-% Information concerning the person submitting the manuscript
-\submitter{Meghan B. McGarry}
-\submitteraddress{1500 Engineering Drive, Madison, WI, USA}
-\submitteremail{mbmcgarry@wisc.edu}
-
-
-% No more than three keywords, though each can be a phrase
-\keywords{fuel cycle, simulation, non-proliferation}
 
 \usepackage{color}
 \usepackage{graphicx}
@@ -29,6 +15,13 @@
 \usepackage{listings}
 \usepackage{textcomp}
 \usepackage{ulem}
+
+% Page length commands go here in the preamble
+\setlength{\oddsidemargin}{-0.25in} % Left margin of 1 in + 0 in = 1 in
+\setlength{\textwidth}{7in}   % Right margin of 8.5 in - 1 in - 6.5 in = 1 in
+\setlength{\topmargin}{-.75in}  % Top margin of 2 in -0.75 in = 1 in
+\setlength{\textheight}{9.2in}  % Lower margin of 11 in - 9 in - 1 in = 1 in
+
 
 \definecolor{listinggray}{gray}{0.9}
 \definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
@@ -67,10 +60,29 @@
 
 \newcommand{\comment}[1]{{\color{green}\textbf{#1}}}
 
-
-\date{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+
+
+%\begin{frontmatter}
+\title{Modeling Material Diversion with the Cyclus Nuclear Fuel Cycle Simulator
+}
+
+% Authors. Separated by commas
+\input{authors}
+\date{}
+% Institutes of the authors
+%\input{institutions}
+% Information concerning the person submitting the manuscript
+%\submitter{Meghan B. McGarry}
+%\submitteraddress{1500 Engineering Drive, Madison, WI, USA}
+%\submitteremail{mbmcgarry@wisc.edu}
+
+% No more than three keywords, though each can be a phrase
+%\keywords{fuel cycle, simulatiom, non-proliferation}
+\maketitle
+
+
 
 \begin{abstract}
 
@@ -96,13 +108,17 @@
 
 \end{abstract}
 
+
+%\end{frontmatter}
+
+
 \input{introduction}
 \input{methods}
 \input{results}
 \input{discussion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bibliographystyle{ans}
-\bibliography{/Users/mbmcgarry/git/papers/zotero_150918,/Users/mbmcgarry/git/papers/websites_manual}
+\bibliographystyle{ANSurl}
+\bibliography{/Users/mbmcgarry/git/papers/zotero_150923,/Users/mbmcgarry/git/papers/websites_manual}
 %\bibliography{/Users/mbmcgarry/git/papers/zotero_150918}
 \end{document}

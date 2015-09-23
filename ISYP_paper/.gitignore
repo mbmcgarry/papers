@@ -4,3 +4,7 @@
 *.ist
 *.acn
 *~
+*.bbl
+*.blg
+*.glo
+*.tex~
