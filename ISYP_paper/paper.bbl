@@ -37,6 +37,12 @@ A.~D. ROSSIN,
   {http://www.pbs.org/wgbh/pages/frontline/shows/reaction/readings/rossin.html}~(\emph{accessed}
   2015-09-17).
 
+\bibitem{editorial_adieu_2009}
+EDITORIAL,
+\newblock ``Adieu to nuclear recycling,''
+\newblock {\em Nature}, {\bf 460}, 152 (2009).
+  {http://dx.doi.org/10.1038/460152b}.
+
 \bibitem{_treaty_????}
 ``Treaty on the {Non}-{Proliferation} of {Nuclear} {Weapons} ({NPT}),''.
   {http://www.un.org/disarmament/WMD/Nuclear/NPT.shtml}~(\emph{accessed}
@@ -46,6 +52,13 @@ A.~D. ROSSIN,
 ``Fissile {Material} {Cut}-off {Treaty} ({FMCT}) at a {Glance} {\textbar}
   {Arms} {Control} {Association},'' 2013.
   {https://www.armscontrol.org/factsheets/fmct}~(\emph{accessed} 2015-09-18).
+
+\bibitem{glaser_zero-knowledge_2014}
+A.~GLASER, B.~BARAK, and R.~J. GOLDSTON,
+\newblock ``A zero-knowledge protocol for nuclear warhead verification,''
+\newblock {\em Nature}, {\bf 510}, 497 (2014).
+  {http://www.nature.com/nature/journal/v510/n7506/full/nature13457.html}~(\emph{accessed}
+  2015-09-23).
 
 \bibitem{cyclus_v1_0}
 R.~W. CARLSEN et~al.,

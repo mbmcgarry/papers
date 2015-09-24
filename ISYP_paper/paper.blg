@@ -4,52 +4,51 @@ The top-level auxiliary file: paper.aux
 The style file: ANSurl.bst
 Database file #1: /Users/mbmcgarry/git/papers/zotero_150923.bib
 Database file #2: /Users/mbmcgarry/git/papers/websites_manual.bib
-Warning--I didn't find a database entry for "_adieu_2009"
-Warning--I didn't find a database entry for "glaser_zero_2014"
 Warning--I didn't find a database entry for "HERO_research"
+Warning--there is url but no urldate in editorial_adieu_2009
 Warning--there is url but no urldate in cyclus_v1_0
 Warning--there is url but no urldate in cyclus_v1_2
 Warning--there is url but no urldate in cyclus_v1_3
 Warning--empty booktitle in scopatz_cymetric_2015
-You've used 21 entries,
+You've used 23 entries,
             2085 wiz_defined-function locations,
-            569 strings with 7242 characters,
-and the built_in function-call counts, 17703 in all, are:
-= -- 2609
-> -- 164
+            582 strings with 7549 characters,
+and the built_in function-call counts, 19090 in all, are:
+= -- 2794
+> -- 183
 < -- 3
-+ -- 2276
-- -- 142
-* -- 241
-:= -- 2804
-add.period$ -- 21
-call.type$ -- 21
-change.case$ -- 35
++ -- 2424
+- -- 154
+* -- 294
+:= -- 3012
+add.period$ -- 23
+call.type$ -- 23
+change.case$ -- 39
 chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 2589
-empty$ -- 410
-format.name$ -- 50
-if$ -- 3172
+cite$ -- 28
+duplicate$ -- 2769
+empty$ -- 462
+format.name$ -- 56
+if$ -- 3433
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 14
-newline$ -- 97
-num.names$ -- 16
-pop$ -- 185
+int.to.str$ -- 23
+missing$ -- 16
+newline$ -- 107
+num.names$ -- 18
+pop$ -- 196
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 116
+skip$ -- 132
 stack$ -- 0
-substring$ -- 2342
-swap$ -- 53
+substring$ -- 2512
+swap$ -- 63
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 4
-while$ -- 72
-width$ -- 23
-write$ -- 194
-(There were 7 warnings)
+warning$ -- 5
+while$ -- 80
+width$ -- 25
+write$ -- 212
+(There were 6 warnings)
