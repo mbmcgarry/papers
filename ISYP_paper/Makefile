@@ -2,11 +2,11 @@ manuscript = paper
 references = refs
 latexopt   = -halt-on-error -file-line-error
 
-all: all-via-dvi
+all: all-via-pdf
 
-all-via-pdf: $(manuscript).tex $(references).bib
+all-via-pdf: $(manuscript).tex
 	pdflatex $(latexopt) $(manuscript)
-	bibtex $(manuscript $<).aux
+	bibtex $(manuscript)
 	pdflatex $(latexopt) $(manuscript)
 	pdflatex $(latexopt) $(manuscript)
 
