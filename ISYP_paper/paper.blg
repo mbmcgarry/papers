@@ -2,52 +2,52 @@ This is BibTeX, Version 0.99d (TeX Live 2014)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: paper.aux
 The style file: ANSurl.bst
-Database file #1: ../zotero_150923.bib
+Database file #1: ../zotero_151013.bib
 Database file #2: ../websites_manual.bib
 Warning--there is url but no urldate in editorial_adieu_2009
 Warning--there is url but no urldate in cyclus_v1_0
 Warning--there is url but no urldate in cyclus_v1_2
 Warning--there is url but no urldate in cyclus_v1_3
 Warning--empty booktitle in scopatz_cymetric_2015
-You've used 23 entries,
+You've used 25 entries,
             2085 wiz_defined-function locations,
-            580 strings with 7473 characters,
-and the built_in function-call counts, 19090 in all, are:
-= -- 2794
-> -- 183
+            590 strings with 7712 characters,
+and the built_in function-call counts, 19535 in all, are:
+= -- 2840
+> -- 190
 < -- 3
-+ -- 2424
-- -- 154
-* -- 294
-:= -- 3012
-add.period$ -- 23
-call.type$ -- 23
-change.case$ -- 39
++ -- 2454
+- -- 159
+* -- 312
+:= -- 3066
+add.period$ -- 25
+call.type$ -- 25
+change.case$ -- 40
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 2769
-empty$ -- 462
-format.name$ -- 56
-if$ -- 3433
+cite$ -- 30
+duplicate$ -- 2816
+empty$ -- 504
+format.name$ -- 58
+if$ -- 3526
 int.to.chr$ -- 0
-int.to.str$ -- 23
+int.to.str$ -- 25
 missing$ -- 16
-newline$ -- 107
-num.names$ -- 18
-pop$ -- 196
+newline$ -- 114
+num.names$ -- 19
+pop$ -- 214
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 132
+skip$ -- 145
 stack$ -- 0
-substring$ -- 2512
-swap$ -- 63
+substring$ -- 2543
+swap$ -- 67
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 5
-while$ -- 80
-width$ -- 25
-write$ -- 212
+while$ -- 83
+width$ -- 27
+write$ -- 225
 (There were 5 warnings)
