@@ -1007,7 +1007,7 @@ FUNCTION {format.url}
         urldate empty$
          { "there is url but no urldate in " cite$ * warning$ }
          { 
-            "~(\textit{accessed} " * urldate * ")" *
+            "~(\emph{accessed} " * urldate * ")" *
          }
          if$
     }

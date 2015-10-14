@@ -5,12 +5,12 @@ C.~MOONEY,
 \newblock ``Why climate change is forcing some environmentalists to back
   nuclear power,''
 \newblock {\em The Washington Post} (2014).
-  {http://www.washingtonpost.com/news/wonkblog/wp/2014/12/16/why-climate-change-is-forcing-some-environmentalists-to-back-nuclear-power/}~(\emph{accessed}
+  {http://www.washingtonpost.com/news/wonkblog/wp/2014/12/16/why-climate-change-is-forcing-some-environmentalists-to-back-nuclear-power/}~(\textit{accessed}
   2015-09-17).
 
 \bibitem{_china_2014}
 ``China plans for nuclear growth,'' 2014.
-  {http://www.world-nuclear-news.org/NP-China-plans-for-nuclear-growth-2011144.html}~(\emph{accessed}
+  {http://www.world-nuclear-news.org/NP-China-plans-for-nuclear-growth-2011144.html}~(\textit{accessed}
   2015-09-17).
 
 \bibitem{feiveson_unmaking_2014}
@@ -22,19 +22,19 @@ H.~A. FEIVESON, A.~GLASER, Z.~MIAN, and F.~N. V.~V. HIPPEL,
 \bibitem{_military_2014}
 ``Military {Warheads} as a {Source} of {Nuclear} {Fuel} {\textbar} {Megatons}
   to {MegaWatts},'' 2014.
-  {http://www.world-nuclear.org/info/Nuclear-Fuel-Cycle/Uranium-Resources/Military-Warheads-as-a-Source-of-Nuclear-Fuel/}~(\emph{accessed}
+  {http://www.world-nuclear.org/info/Nuclear-Fuel-Cycle/Uranium-Resources/Military-Warheads-as-a-Source-of-Nuclear-Fuel/}~(\textit{accessed}
   2015-09-18).
 
 \bibitem{_processing_2015}
 ``Processing of {Used} {Nuclear} {Fuel},'' 2015.
-  {http://www.world-nuclear.org/info/Nuclear-Fuel-Cycle/Fuel-Recycling/Processing-of-Used-Nuclear-Fuel/}~(\emph{accessed}
+  {http://www.world-nuclear.org/info/Nuclear-Fuel-Cycle/Fuel-Recycling/Processing-of-Used-Nuclear-Fuel/}~(\textit{accessed}
   2015-09-18).
 
 \bibitem{rossin_policy_????}
 A.~D. ROSSIN,
 \newblock ``Policy {On} {Reprocessing} {\textbar} {Nuclear} {Reaction}
   {\textbar} {FRONTLINE} {\textbar} {PBS},''.
-  {http://www.pbs.org/wgbh/pages/frontline/shows/reaction/readings/rossin.html}~(\emph{accessed}
+  {http://www.pbs.org/wgbh/pages/frontline/shows/reaction/readings/rossin.html}~(\textit{accessed}
   2015-09-17).
 
 \bibitem{editorial_adieu_2009}
@@ -45,28 +45,29 @@ EDITORIAL,
 
 \bibitem{_treaty_????}
 ``Treaty on the {Non}-{Proliferation} of {Nuclear} {Weapons} ({NPT}),''.
-  {http://www.un.org/disarmament/WMD/Nuclear/NPT.shtml}~(\emph{accessed}
+  {http://www.un.org/disarmament/WMD/Nuclear/NPT.shtml}~(\textit{accessed}
   2015-09-18).
 
 \bibitem{_treaty:_????}
 ``The {Treaty}: {CTBTO} {Preparatory} {Commission},''.
-  {https://www.ctbto.org/the-treaty/}~(\emph{accessed} 2015-10-12).
+  {https://www.ctbto.org/the-treaty/}~(\textit{accessed} 2015-10-12).
 
 \bibitem{department_of_State_new_2010}
 D.~OF~STATE,
 \newblock ``New {START},'' 2010.
-  {http://www.state.gov/t/avc/newstart/index.htm}~(\emph{accessed} 2015-10-12).
+  {http://www.state.gov/t/avc/newstart/index.htm}~(\textit{accessed}
+  2015-10-12).
 
 \bibitem{_fissile_2013}
 ``Fissile {Material} {Cut}-off {Treaty} ({FMCT}) at a {Glance} {\textbar}
   {Arms} {Control} {Association},'' 2013.
-  {https://www.armscontrol.org/factsheets/fmct}~(\emph{accessed} 2015-09-18).
+  {https://www.armscontrol.org/factsheets/fmct}~(\textit{accessed} 2015-09-18).
 
 \bibitem{glaser_zero-knowledge_2014}
 A.~GLASER, B.~BARAK, and R.~J. GOLDSTON,
 \newblock ``A zero-knowledge protocol for nuclear warhead verification,''
 \newblock {\em Nature}, {\bf 510}, 497 (2014).
-  {http://www.nature.com/nature/journal/v510/n7506/full/nature13457.html}~(\emph{accessed}
+  {http://www.nature.com/nature/journal/v510/n7506/full/nature13457.html}~(\textit{accessed}
   2015-09-23).
 
 \bibitem{cyclus_v1_0}
@@ -88,7 +89,7 @@ R.~CARLSEN et~al.,
 N.~R. JENNINGS,
 \newblock ``On agent-based software engineering,''
 \newblock {\em Artificial Intelligence}, {\bf 117}, 277 (2000).
-  {http://www.sciencedirect.com/science/article/pii/S0004370299001071}~(\emph{accessed}
+  {http://www.sciencedirect.com/science/article/pii/S0004370299001071}~(\textit{accessed}
   2015-09-23).
 
 \bibitem{taylor2014agent}
