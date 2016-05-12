@@ -1,0 +1,132 @@
+%\documentclass{proc}  % 2-column format
+\documentclass[12pt]{paper}
+%\documentclass{ntmanuscript}
+%\documentclass[review]{elsarticle}
+\usepackage[acronym,toc]{glossaries}
+\include{acros}
+%\makeglossaries
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{booktabs} % nice rules for tables
+\usepackage{microtype} % if using PDF
+\usepackage{xspace}
+\usepackage{listings}
+\usepackage{textcomp}
+%\usepackage{ulem}
+
+% Page length commands go here in the preamble
+\setlength{\oddsidemargin}{-0.25in} % Left margin of 1 in + 0 in = 1 in
+\setlength{\textwidth}{7in}   % Right margin of 8.5 in - 1 in - 6.5 in = 1 in
+\setlength{\topmargin}{-.75in}  % Top margin of 2 in -0.75 in = 1 in
+\setlength{\textheight}{9.2in}  % Lower margin of 11 in - 9 in - 1 in = 1 in
+
+
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\lstset{
+    %backgroundcolor=\color{lbcolor},
+    language={C++},
+    tabsize=4,
+    rulecolor=\color{black},
+    upquote=true,
+    aboveskip={1.5\baselineskip},
+    belowskip={1.5\baselineskip},
+    columns=fixed,
+    extendedchars=true,
+    breaklines=true,
+    prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=single,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    basicstyle=\scriptsize\ttfamily\color{green!40!black},
+    keywordstyle=\color[rgb]{0,0,1.0},
+    commentstyle=\color[rgb]{0.133,0.545,0.133},
+    stringstyle=\color[rgb]{0.627,0.126,0.941},
+    numberstyle=\color[rgb]{0,1,0},
+    identifierstyle=\color{black},
+    captionpos=t,
+}
+
+\newcommand{\code}[1]{\lstinline[basicstyle=\ttfamily\color{green!40!black}]|#1|}
+\newcommand{\units}[1] {\:\text{#1}}%
+\newcommand{\SN}{S$_N$}
+\newcommand{\cyclus}{\textsc{Cyclus}\xspace}
+\newcommand{\Cyclus}{\cyclus}
+\newcommand{\citeme}{\textcolor{red}{CITE}\xspace}
+\newcommand{\TODO}[1] {{\color{red}\textbf{TODO: #1}}}%
+
+\newcommand{\comment}[1]{{\color{green}\textbf{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+%\begin{frontmatter}
+\title{Cyclus As a Synthetic Testbed of Systems-Level Diversion Signatures}
+
+% Authors. Separated by commas
+\input{authors}
+\date{}
+% Institutes of the authors
+\input{institutions}
+% Information concerning the person submitting the manuscript
+%\submitter{Meghan B. McGarry}
+%\submitteraddress{1500 Engineering Drive, Madison, WI, USA}
+%\submitteremail{mbmcgarry@wisc.edu}
+
+% No more than three keywords, though each can be a phrase
+%\keywords{fuel cycle, simulatiom, non-proliferation}
+\maketitle
+
+
+
+\begin{abstract}
+
+  Already the dominant source of clean energy, nuclear power is growing at a
+  rapid pace.  While beneficial to a world confronting climate change, the
+  nuclear security and non-proliferation impacts of expanding nuclear power
+  will become more consequential.  As a result, it is imperative to develop
+  credible methods to verify compliance with treaties that control fissile
+  material production, such as the Non-Proliferation Treaty or a potential
+  Fissile Material Cutoff Treaty. As part of the Consortium for Verification
+  Technology, the Cyclus fuel cycle simulator is being used as a testbed for the
+  development of new technologies and analysis approaches to treaty
+  verification. Cyclus is an agent-based, systems-level simulator that tracks
+  discrete material flow through the entire fuel cycle, from mining through
+  burnup in reactors to a repository, or alternatively through one or more
+  iterations of reprocessing. A systems-level view facilitates the study of
+  correlated signals from different facilities that combine to form identifiable
+  signatures of clandestine activity. Cyclus also includes a
+  region/institution/facility hierarchy that can incorporate the effects of
+  tariffs and sanctions in regional or global contexts.  Cyclus enables social-
+  behavioral modeling of the interactions between individual facilities or
+  regions.  This paper presents the first use of Cyclus to simulate nuclear
+  material diversion from the fuel cycle using a variety of correlated signals:
+  material flow, facility power consumption, effluent emissions (including
+  geospatial distribution), event-logs.  Multiple signal modalities can be
+  analyzed in concert using anomaly detection techniques to identify signatures
+  of material diversion or other signatures of clandestine nuclear weapons
+  development.  The Cyclus testbed can then be used to examine treaty
+  verification techniques and inspection regimens to to inform their sensitivity
+  and limitations.
+
+\end{abstract}
+
+
+%\end{frontmatter}
+
+
+\input{introduction}
+\input{methods}
+\input{results}
+\input{discussion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{small}
+\bibliographystyle{ANSurl}
+\bibliography{../zotero_151013,../websites_manual}
+\end{small}
+\end{document}
