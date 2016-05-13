@@ -3,39 +3,34 @@
 
 \Cyclus is able to model signatures of diversion from a diverse set of facilities in the nuclear fuel cycle and with a variety of data modalities. Table \ref{tab:modalities} lists a variety of signal modalities and their applications in the fuel cycle (TODO: synonym for schema?).  One modality with diverse set of potential applications is satellite imagery.  We are now developing the software infrastructure to create synthetic satellite images that may contain signals of diversion. Satellite imagery has a variety of applications: tracking personnel or truck movement patterns, thermal or visible signatures of effluent or heat, or major facility changes such as new or removed buildings.
 
-%% TODO: MAKE TABLE WITH MODALITIES AND THEIR APPLICATIONS
-% Simulation parameters in RS_3sink.xml at
-%/Users/mbmcgarry/git/data_analysis/data/v1.2/random_sink/
 \begin{table}
 \centering
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{|c|c|}
 \hline
-\textbf{General}    & Duration (months)       & 100  \\
-\textbf{Simulation} & Natural U (\% $^{235}U$) & 0.7  \\
-\textbf{Parameters} & LEU (\% $^{235}U$)       & 4.0  \\
-                    & HEU (\% $^{235}U$)       & 90.0 \\
+\textbf{Modality}        & \textbf{Physical Signal} \\
 \hline
-\textbf{Enrichment} & SWU Capacity (kg-SWU/month) & 180  \\
-\textbf{Facility}   & Tails Assay (\% $^{235}U$)   & 0.3  \\
+Time-series              & Material Flow \\
+                         & Power Usage \\
 \hline
-\textbf{LEU Demand} & Mean Qty (kg)       & 33.0  \\
-                    & $\sigma$ (kg)       & 0.5  \\
+Discrete Event           & Shipments \\
 \hline
-\textbf{HEU Demand} & Qty (kg)            & 0.03  \\
-                    & Avg Rate of Occurrence & 1/5 \\ 
+Sparse Data              & Inspections \\
+\hline
+Geospatially Distributed & Effluent Dispersion  \\
+\hline
+Energy-series            & Neutron Spectra \\
+\hline
+Surveillance Images*     & Resource tracking \\
+                         & Thermal Maps  \\
+                         & Infrastructure Modifications \\
 \hline
 \end{tabular}
-\caption{Simulation parameters for \gls{HEU} diversion scenario.}
+\caption{Data Modalities available in \Cyclus (* = in progress) and their fuel cycle applications}
 \label{tab:sim_params}
 \end{table}
 
 These diverse datasets can be combined to highlight signatures of diversion that are small enough to be hidden in the noise of individual signals.  We have illustrated this technique by combining time-series data for power consumption and declared \gls{LEU} production for a simple scenario of \gls{HEU} production in an enrichment facility.  More realistic scenarios require advanced anomaly detection techniques such as those being developed at \gls{UM}. A collaboration with \gls{UM} and \gls{Sandia} will investigate ways to optimize subsets of diverse signal modalities to ensure reliable detection while minimizing resource usage.
 
-The \Cyclus fuel cycle simulator is being used as a framework for combining techniques and knowledge from a variety of disciplines to support a cohesive approach to treaty verification.  Moving forward, \Cyclus will be used to study more complex and realistic diversion scenarios.  Additionally, \Cyclus has the capability to produce synthetic signals of inherent physical processes such as neutron spectra of various materials.  In this way, \Cyclus simulations can provide theoretical signals to researchers developing experimental detectors in order to test sensitivity and detector response.  \Cyclus is also being used to explore behavioral mode ***
+The \Cyclus fuel cycle simulator is being used as a framework for combining techniques and knowledge from a variety of disciplines to support a cohesive approach to treaty verification.  Moving forward, \Cyclus will be used to study more complex and realistic diversion scenarios.  Additionally, \Cyclus has the capability to produce synthetic signals of inherent physical processes such as neutron spectra of various materials.  In this way, \Cyclus simulations can provide theoretical signals to researchers developing experimental detectors in order to test sensitivity and detector response.  \Cyclus is also being used to explore behavioral 
 
-
-Probabilistic models for behavior based on the actor's risk-perception will be explored.  Ongoing collaborations as part of the \gls{CVT} are examining the mechanisms and limits of expanding anomaly detection algorithms with other types of data, such as social media chatter.  Due to the inherently interdisciplinary nature of this work, new external collaborations are sought with experts in behavioral modeling. Innovative ideas on detection modalities and diversion detection techniques are also welcomed.
-
-
-
-\textit{This work was funded in-part by the Consortium for Verification Technology under Department of Energy National Nuclear Security Administration award number DE-NA0002534”}
+\textit{This work was funded by the Consortium for Verification Technology under Department of Energy National Nuclear Security Administration award number DE-NA0002534”}
