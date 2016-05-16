@@ -11,9 +11,9 @@ Figure \ref{fig:signatures} is a table-in-progress to identify potential signatu
 % Google spreadsheet: CVT_Research/Collaborations/Fuel Cycle Facility Signatures
 \begin{figure}%[htbp!]
 \begin{center}
-\includegraphics[natwidth=162bp,natheight=227bp, scale=0.6]{./figs/signatures_table.pdf}
+\includegraphics[scale=0.8, angle=90]{./figs/signatures_table.pdf}
 \end{center}
-\caption{Table of potential signatures across the fuel cycle. Green=measureable through open, independent sources such as satellite imagery, Blue=available through official inspections, Yellow=data may be unreliable due to physical or political constraints.}
+\caption{Table of potential signatures across the fuel cycle: measureable through open, independent sources such as satellite imagery (green), available through official inspections (blue), or potentially unreliable due to physical or political constraints (yellow).}
 \label{fig:signatures}
 \end{figure}
 
@@ -23,10 +23,10 @@ Figure \ref{fig:signatures} is a table-in-progress to identify potential signatu
 % /Users/mbmcgarry/git/data_analysis/data/v1.3/pu_reprocess/
 \begin{figure}%[htbp!]
 \begin{center}
-\includegraphics[natwidth=162bp,natheight=227bp, scale=0.6]{./figs/proper_diff_fr61.png}
+\includegraphics[natwidth=162bp,natheight=227bp, scale=0.4]{./figs/proper_diff_fr61.png}
 \end{center}
-\caption{Effluent transport with wind from left, hides a clandestine reprocessing facility (x,y)=(11,9) in close proximity to two declared facilities ((x,y)=(1,3), (1,17)}
-\label{fig:signatures}
+\caption{Effluent transport with wind from left, hides a clandestine reprocessing facility x,y=(11,9) in close proximity to two declared facilities x,y=(1,3), (1,17)}
+\label{fig:effluent}
 \end{figure}
 
 \Cyclus is also being used to model inspections at an enrichment facility that test for the presence of \gls{HEU}. IAEA inspections typically involve multiple swipe samples per location, with some likelihood of false-positive or false-negative results.\cite{INSPECTION_FALSE?}.  Figure \ref{fig:inspect} pairs inspections with undeclared truck shipments of \gls{HEU}. In this example, it is assumed that the likelihood of detecting \gls{HEU} in the enrichment facility increases with each shipment (because contamination is possible when \gls{HEU} is removed from cascades and bottled for shipping).  The undeclared \gls{HEU} shipments are shown as black bars, where amplitude incorporates the gross quantity \gls{HEU} that has been produced at the facility. The colored dots scale from yellow to red, indicating the fraction of positive swipes at an \gls{IAEA} inspector visit (assumiing a total of 10 swipes are taken per inspection, and an average of two inspections per year).  It is assumed that both false-positive and false-negative results are possible. 
@@ -34,18 +34,18 @@ Figure \ref{fig:signatures} is a table-in-progress to identify potential signatu
 % /Users/mbmcgarry/git/data_analysis/data/UM_data/multi_modal_v1.3/single_runs/inspect_example
 \begin{figure}%[htbp!]
 \begin{center}
-\includegraphics[natwidth=162bp,natheight=227bp, scale=0.6]{./figs/mm_5enr_lowtails_insp_200yrinspect_ship.png}
+\includegraphics[natwidth=162bp,natheight=227bp, scale=0.6]{./figs/mm_5enrich_tinytails_inspinspect_ship.png}
 \end{center}
 \caption{Black bars indicate clandestine shipments of \gls{HEU}, amplitudes show gross \gls{HEU} production at the enrichment facility.  Colored circles are fraction of swipes (out of 10) testing positive for \gls{HEU} during an inspection. Both false positives and false negatives may be present, introducing uncertainty into the data. As more \gls{HEU} is produced, the detection rate increases.}
-\label{fig:signatures}
+\label{fig:inspect}
 \end{figure}
 
-Figure \fig{false_inspect} shows the breakdown of true positive, false positive, and false negative results for each inspection (for illustrative purposes only, in practice the true accuracy of a particular set of field data is unknowable).  Before month 30, no \gls{HEU} has been produced in the facility, so any ``positive'' swipes are false-positives (tan). Once the facility begins producing \gls{HEU}, liklihood of contamination increases until it is detected near month 80. If the swipe tests were perfect, there would be a 100\% detection rate for all inspections after that time. However, the possibility of false-negatives (pink), make it so that the measured inspection data appears to be the tan before month 80 and the red after month 80.  In this scenario, it would be difficult for an inspector to conclude that \gls{HEU} was being produced with this dataset alone.
+Figure \ref{false_inspect} shows the breakdown of true positive, false positive, and false negative results for each inspection (for illustrative purposes only, in practice the true accuracy of a particular set of field data is unknowable).  Before month 30, no \gls{HEU} has been produced in the facility, so any ``positive'' swipes are false-positives (tan). Once the facility begins producing \gls{HEU}, liklihood of contamination increases until it is detected near month 80. If the swipe tests were perfect, there would be a 100\% detection rate for all inspections after that time. However, the possibility of false-negatives (pink), make it so that the measured inspection data appears to be the tan before month 80 and the red after month 80.  In this scenario, it would be difficult for an inspector to conclude that \gls{HEU} was being produced with this dataset alone.
 
 \begin{figure}%[htbp!]
 \begin{center}
-\includegraphics[natwidth=162bp,natheight=227bp, scale=0.6]{./figs/mm_5enr_lowtails_insp_200yrswipe_rates.png}
+\includegraphics[natwidth=162bp,natheight=227bp, scale=0.6]{./figs/mm_5enrich_tinytails_inspswipe_rates.png}
 \end{center}
 \caption{The scenario in Figure \ref{fig:signatures} had a 30\% rate for both false-positives and false-negatives. Before month 30, no HEU has been produced so all detections are false positives (tan). Once \gls{HEU} contamination is present (near month 80), true detections (red) combine with false-negatives (pink), resulting in a effective 70\% detection rate.}
-\label{fig:signatures}
+\label{fig:false_inspect}
 \end{figure}

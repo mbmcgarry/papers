@@ -1,7 +1,7 @@
 \section{Discussion}
 \label{s_dis}
 
-\Cyclus is able to model signatures of diversion from a diverse set of facilities in the nuclear fuel cycle and with a variety of data modalities. Table \ref{tab:modalities} lists a variety of signal modalities and their applications in the fuel cycle (TODO: synonym for schema?).  One modality with diverse set of potential applications is satellite imagery.  We are now developing the software infrastructure to create synthetic satellite images that may contain signals of diversion. Satellite imagery has a variety of applications: tracking personnel or truck movement patterns, thermal or visible signatures of effluent or heat, or major facility changes such as new or removed buildings.
+\Cyclus is able to model signatures of diversion from a diverse set of facilities in the nuclear fuel cycle and with a variety of data modalities. Table \ref{tab:modalities} lists a variety of signal modalities and their applications in the fuel cycle paradigm.  One modality with diverse set of potential applications is satellite imagery.  We are now developing the software infrastructure to create synthetic satellite images that may contain signals of diversion. Satellite imagery has a variety of applications: tracking personnel or truck movement patterns, thermal or visible signatures of effluent or heat, or major facility changes such as new or removed buildings.
 
 \begin{table}
 \centering
@@ -25,8 +25,8 @@ Surveillance Images*     & Resource tracking \\
                          & Infrastructure Modifications \\
 \hline
 \end{tabular}
-\caption{Data Modalities available in \Cyclus (* = in progress) and their fuel cycle applications}
-\label{tab:sim_params}
+\caption{Data Modalities available in \Cyclus (*in progress) and their fuel cycle applications}
+\label{tab:modalities}
 \end{table}
 
 These diverse datasets can be combined to highlight signatures of diversion that are small enough to be hidden in the noise of individual signals.  We have illustrated this technique by combining time-series data for power consumption and declared \gls{LEU} production for a simple scenario of \gls{HEU} production in an enrichment facility.  More realistic scenarios require advanced anomaly detection techniques such as those being developed at \gls{UM}. A collaboration with \gls{UM} and \gls{Sandia} will investigate ways to optimize subsets of diverse signal modalities to ensure reliable detection while minimizing resource usage.

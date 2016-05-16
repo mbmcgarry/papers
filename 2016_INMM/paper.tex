@@ -2,12 +2,14 @@
 \documentclass[12pt]{paper}
 %\documentclass{ntmanuscript}
 %\documentclass[review]{elsarticle}
+\usepackage{mathptmx} % Nearly Times New Roman
 \usepackage[acronym,toc]{glossaries}
 \include{acros}
 %\makeglossaries
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{color}
+\usepackage{subcaption}
 \usepackage{graphicx}
 \usepackage{booktabs} % nice rules for tables
 \usepackage{microtype} % if using PDF
@@ -21,6 +23,7 @@
 \setlength{\textwidth}{7in}   % Right margin of 8.5 in - 1 in - 6.5 in = 1 in
 \setlength{\topmargin}{-.75in}  % Top margin of 2 in -0.75 in = 1 in
 \setlength{\textheight}{9.2in}  % Lower margin of 11 in - 9 in - 1 in = 1 in
+
 
 
 \definecolor{listinggray}{gray}{0.9}
@@ -121,12 +124,13 @@
 
 \input{introduction}
 \input{methods}
+\input{signatures}
 \input{results}
 \input{discussion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{small}
 \bibliographystyle{ANSurl}
-\bibliography{../zotero_151013,../websites_manual}
+\bibliography{../zotero_160516,../websites_manual}
 \end{small}
 \end{document}
