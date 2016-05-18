@@ -1,4 +1,4 @@
-archetype-paper
+INMM-Paper
 ===============
 
-Archetype Paper
+INMM paper
