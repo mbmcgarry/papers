@@ -1,27 +1,25 @@
 \section{Signatures and Observables}
 \label{s_signatures}
 
-
-Figure \ref{fig:signatures} characterizes potential signatures and observables of illicit activity at all major facilities in the nuclear fuel cycle.  Each potential signature is color coded to represent the accessibility of the data: measureable through open, independent sources such as satellite imagery (green), available through official inspections (blue), or potentially unreliable due to physical or political constraints such as state declarations (yellow).  Not all of these signatures are currently collected, and it would be prohibitively resource intensive to maintain comprehensive monitoring. Therefore, correlations in these individual signatures must be leveraged to overcome sparse datasets or resource constraints.
-
+\Cyclus is being used to produce a variety of synthetic signals spanning a range of modalities that would be available either publicly or via official inspections.  Figure \ref{fig:signatures} identifies potential signatures and observables of illicit activity at all major facilities in the nuclear fuel cycle.  Each potential signature is color coded to represent the accessibility of the data: measureable through open, independent sources such as satellite imagery (green), available through official inspections (blue), or potentially unreliable due to physical or political constraints such as state declarations (yellow).  Not all of these signatures are currently collected, and it would be prohibitively resource intensive to maintain comprehensive monitoring. Therefore, correlations in these individual signatures must be leveraged to overcome sparse datasets or resource constraints.
 
 % Google spreadsheet: CVT_Research/Collaborations/Fuel Cycle Facility Signatures
 \begin{figure}%[htbp!]
 \begin{center}
 \includegraphics[scale=0.8]{./figs/signatures_table.pdf}
 \end{center}
-\caption{Table of potential signatures across the fuel cycle: measureable through open, independent sources such as satellite imagery (green), available through official inspections (blue), or potentially unreliable due to physical or political constraints (yellow).\cite{kemp_environmental_2016,_plutonium_????,ferreira_radiometric_2012,stork_systematic_2006}}
+\caption{Table of potential signatures across the fuel cycle: measureable through open, independent sources such as satellite imagery (green), available through official inspections (blue), or potentially unreliable due to physical or political constraints (yellow)\cite{kemp_environmental_2016,_plutonium_????,ferreira_radiometric_2012,stork_systematic_2006}.}
 \label{fig:signatures}
 \end{figure}
 
-\Cyclus is being used to produce a variety of synthetic signals spanning a range of modalities that would be available either publicly or via official inspections (green or blue).  As detailed in Section \ref{s_results}, all facilities in \Cyclus inherently produce time-series data such as material flow, inventory, and \gls{SWU} consumption (for enrichment facilities). As seen in Figure \ref{fig:effluent}, \Cyclus can combine atmospheric transport models with facility effluent concentration ($I$) to track geographic dispersion. In this example, a simple atmospheric diffusion model of wind (from the left) is used to illustrate how a small clandestine reprocessing facility could be hidden in close proximity to two larger declared facilities\cite{hanna_handbook_1982}. 
+All facilities in \Cyclus inherently produce time-series data such as material flow, inventory, and \gls{SWU} consumption (for enrichment facilities), as well as signatures in other modalities. Figure \ref{fig:effluent} produces the geospatial signature of effluent by combining \Cyclus with a simple atmospheric diffusion model of wind (from the left) to illustrate how a small clandestine reprocessing facility could be hidden in close proximity to two larger declared facilities\cite{hanna_handbook_1982}. 
 
 % /Users/mbmcgarry/git/data_analysis/data/v1.3/pu_reprocess/
 \begin{figure}%[htbp!]
 \begin{center}
 \includegraphics[natwidth=162bp,natheight=227bp, scale=0.4]{./figs/proper_diff_fr61.png}
 \end{center}
-\caption{Effluent transport with wind from left, hides a clandestine reprocessing facility x,y=(11,9) in close proximity to two declared facilities x,y=(1,3), (1,17)}
+\caption{Effluent transport with wind from left, hides a clandestine reprocessing facility x,y=(11,9) in close proximity to two declared facilities x,y=(1,3), (1,17).}
 \label{fig:effluent}
 \end{figure}
 
