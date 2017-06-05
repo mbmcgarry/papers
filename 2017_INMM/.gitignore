@@ -1,0 +1,12 @@
+*.aux
+*.dvi
+*.log
+*.ist
+*.acn
+*~
+*.bbl
+*.blg
+*.glo
+*.tex~
+tmp/
+figs/old/
