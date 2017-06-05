@@ -1,9 +1,9 @@
-\section{A \Cyclus Model of Regional Interaction}
+\section{A \Cyclus Model of Nuclear Weapon Pursuit}
 \label{s_methods}
 
 We have applied the factors correlated to pursuit of nuclear weapons in a regional model of state interactions using \Cyclus\cite{huff_open_2011,huff_fundamental_2016,gidden_agent-based_2013}.  The \gls{CNERG}\footnote{http://cnerg.github.io/} group at the University of Wisconsin has developed the \Cyclus\footnote{http://fuelcycle.org/} nuclear fuel cycle simulator to model all aspects of the nuclear fuel cycle in a flexible way \cite{cyclus_v1_3}.  \Cyclus has three key features: it is \textit{agent-based}, it tracks \textit{discrete materials}, and it incorporates \textit{social and behavioral interaction models}\cite{jennings_agent-based_2000, taylor2014agent}. This design allows customized facilities and institutions to engage in dynamic decision-making based on their preferences, needs, or political constraints across a wide range of scenarios.  A specific agent might have preferences based on material composition, physical proximity between facilities, or preferred trading partners, which are implemented in a region-institution-facility hierarchy that enables economic modeling \cite{oliver_geniusv2:_2009}.
 
-\subsection{Nuclear Weapon Pursuit: A Forward Model}
+\subsection{The Forward Model}
 
 The region-institution-facility design has been used to develop the \gls{NWPM}. This forward model features two custom archetypes, an interaction region (InteractRegion) and a state institution (StateInst) \TODO{CITE mbmore}.  The state institution represents the a nation-state.  It includes time-dynamic information about each of the pursuit factors. The interaction region is an omniscient presence in the simulation that tracks weapon status as well as interactive pursuit factors such as conflict(as described in section \ref{section:s_pe}), and communicates that factor to each individual state. 
 
@@ -22,7 +22,7 @@ Each of the motivating factors is defined for every state in a time dynamic way.
 The score is then converted into a likelihood that the state will pursue a weapon. The relationship between pursuit score and likelihood of pursuing a weapon has been characterized using historical data of the 42 states that have developed nuclear technology since 1942.  \ref{fig:likely} shows the fraction of states with a given pursuit score that pursued a weapon during that time. A power-law (red) provides a better fit to the data compared with a weighted linear fit (black).  This data represents the total likelihood integrated over the course of 75 years ($T$). \ref{eqn:likely_eqn} is used to convert to the likelihood of pursuit $L$ in any given year, given a pursuit score $s$.
 
 \begin{equation}
-L = 1 - (1 - s)^{1.0/T})
+L = 1 - (1 - s)^{1.0/T}
 \label{eqn:likely_eqn}
 \end{equation}
 
