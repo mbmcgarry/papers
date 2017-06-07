@@ -15,17 +15,18 @@ Each of the motivating factors is defined for every state in a time dynamic way.
 \begin{center}
 \includegraphics[scale=0.8]{./figs/pe_likely.png}
 \end{center}
-\caption{Fraction of states with any nuclear technology (dataset from \ref{s_factors}) that pursued weapons at some point in the last 75 years, given their pursuit scores. The black power-law curve is a better fit to the data compared with the red weighted linear fit.}
+\caption{Fraction of states with any nuclear technology (dataset from \ref{s_factors}) that pursued weapons at some point in the last 75 years, given their pursuit scores. Although a power-law curve (black) and a weighted linear fit (red) are equivalent with the existing data, a complete set of nation-states would increase the relative weight of lower scores, making the exponential curve a better fit.}
 \label{fig:likely}
 \end{figure}
  
-The score is then converted into a likelihood that the state will pursue a weapon. The relationship between pursuit score and likelihood of pursuing a weapon has been characterized using historical data of the 42 states that have developed nuclear technology since 1942.  \ref{fig:likely} shows the fraction of states with a given pursuit score that pursued a weapon during that time. A power-law (red) provides a better fit to the data compared with a weighted linear fit (black).  This data represents the total likelihood integrated over the course of 75 years ($T$). \ref{eqn:likely_eqn} is used to convert to the likelihood of pursuit $L$ in any given year, given a pursuit score $s$.
+The score is then converted into a likelihood that the state will pursue a weapon. The relationship between pursuit score and likelihood of pursuing a weapon has been characterized using historical data of the 42 states that have developed nuclear technology since 1942.  \ref{fig:likely} shows the fraction of states with a given pursuit score that pursued a weapon during that time. A power-law (red) or a weighted linear fit (black) are are equivalentl with the 42 state dataset. However, a global dataset of nation-states would have disproportionately lower scores, so we consider the power-law fit to be more representative.
 
+
+The data shown in \ref{fig:likely} represents the total likelihood integrated over the course of 75 years ($T$). \ref{eqn:likely_eqn} is used to convert to the likelihood of pursuit $L$ in any given year, given a pursuit score $s$.
 \begin{equation}
 L = 1 - (1 - s)^{1.0/T}
 \label{eqn:likely_eqn}
 \end{equation}
-
 In the \gls{NWPM} forward model, each state's score is converted to a likelihood of pursuit at that timestep using \ref{eqn:likely}. The actual conversion is bounded using two heavy-side functions such that scores below a lower threshold (e.g. 4) are forced to a likelihood of zero, while scores above an upper threshold (e.g. 9) are forced to the value of the score at the threshold.   A random number generator is used given the likelihood to determine whether or not the pursuit event occurs. If the determination is for pursuit to occur, the state deploys a secret enrichment facility. If a state is already pursuing a weapon, then the model determines whether it succeeds in acquiring a weapon at that timestep using a median time to acquire of 20 years, based on historical data for states that have acquired weapons\TODO{WHAT IS EXACT MEDIAN FOR STATES THAT HAVE SUCCEEDED?}. On the timesteip in which a state succeeds in acquiring a weapon, highly enriched uranium is shipped out of the secret enrichment facility.
 
 \subsection{Limitations of the Historical Data}
