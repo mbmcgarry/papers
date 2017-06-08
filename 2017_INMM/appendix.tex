@@ -2,49 +2,54 @@
 \label{s_appendix}
 
 %\iffalse
+
+%\begin{landscape}
 \begin{table}
 \centering
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Factor Score} & \textbf{Authoritarian} & \textbf{Enrichment}  & \multicolumn{2}{c|}{\textbf{Military Isolation}}    & \textbf{Military Spending} & \textbf{Scientific Network} & \textbf{Nuclear Reactors}  & \textbf{Uranium Reserves} \\
-                     &                        &  \textbf{\& Reprocess}& \multicolumn{2}{c|}{$S = 10 - (S_{NNWS} + S_{NWS}$)} & \textbf{(\%GDP)}           &                             &                            &  \\
+\textbf{Factor}      & \textbf{Auth}          & \textbf{Enrich/}      & \multicolumn{2}{c|}{\textbf{Military Iso.}}          & \textbf{Mil. Spend} &  \textbf{Reactors}  & \textbf{Sci.} & \textbf{Uran.} \\
+\textbf{Score}  &                        &  \textbf{Repro.}   & \multicolumn{2}{c|}{$10 - (A_{NNWS}+A_{NWS})$}  & \textbf{(\%GDP)}    &   (Power+Research) & \textbf{Net.} &  \textbf{Res} \\
 \cline{4-5}
-                    &                         &                        &  $S_{NNWS}$ alliance   & $S_{NWS}$ alliance          &                           &                             &                            & \\
+ (FS)           &                         &                       &  NNWS                 & NWS               &                    & $10 - R_{all}$&               &              \\
 
 
 \hline
-0                     &  0                     &  0                   &  --                        &  --                     &  --                      &    --                        &      \\   
-1                     &  1                     &  --                  &  $<=$ 2                    &  --                     &  $<$ 1                   &    --                        &         \\
-2                     &  2                     &  --                  &  (2,4]                     &  --                     &  [1, 2)                  &    --                        &             \\
-3                     &  3                     &  --                  &  $> 4$                     &  --                     &  --                      &    --                        &          \\
-4                     &  4                     &  --                  &  --                        &  --                     &  [2, 3)                  &     1                        &         \\
-5                     &  5                     &  --                  &  --                        &  1                      &  --                      &    --                        &          \\
-6                     &  6                     &  --                  &  --                        &  2                      &  --                      &    --                        &          \\
-7                     &  7                     &  --                  &  --                        &  $>=$ 3                 &  [3, 5)                  &     2                        &            \\
-8                     &  8                     &  --                  &  --                        &  --                     &  --                      &    --                        &           \\
-9                     &  9                     &  --                  &  --                        &  --                     &  --                      &    --                        &           \\
-10                    &  10                    &  1                   &  --                        &  --                     &   $>=$5                  &     3                        &          \\
+\textbf{0}      &  0                     &  0                   &  --                        &  --                     &  --                 &   0                   &    --         &  0           \\   
+\textbf{1}      &  1                     &  --                  &  1-2                       &  --                     &  $<$ 1              &   1-3 planned         &    --         &  --          \\
+\textbf{2}      &  2                     &  --                  &  3-4                       &  --                     &  [1, 2)             &   4+ planned          &    --         &  --          \\
+\textbf{3}      &  3                     &  --                  &  5+                        &  --                     &  --                 &    --                 &    --         &  --          \\
+\textbf{4}      &  4                     &  --                  &  --                        &  --                     &  [2, 3)             &    1-3 built          &     1         &  --          \\
+\textbf{5}      &  5                     &  --                  &  --                        &  1                      &  --                 &       --              &    --         &  --          \\
+\textbf{6}      &  6                     &  --                  &  --                        &  2                      &  --                 &       --              &    --         &  --          \\
+\textbf{7}      &  7                     &  --                  &  --                        &  3+                     &  [3, 5)             &    4-7 built          &     2         &  --          \\
+\textbf{8}      &  8                     &  --                  &  --                        &  --                     &  --                 &       --              &    --         &  --          \\
+\textbf{9}      &  9                     &  --                  &  --                        &  --                     &  --                 &       --              &    --         &  --          \\
+\textbf{10}     &  10                    &  1                   &  --                        &  --                     &   5.0+              &    8+ built           &     3         &  10          \\
 
 \hline
 \end{tabular}
-\caption{\TODO{CAPTION}}
+\caption{Conversion table from raw data to final factor score (FS). Square brackets are inclusive, parentheses are exclusive, such that [1,2) indicates $1<=x<2$. Reactors and military alliances (used to define military isolation) are both anti-correlated to pursuit so the final factor score for these factors is 10 minus the value shown in the table. Conflict factor is defined separately in table \ref{tab:conflict}. }
 \label{tab:factor_conversions}
 \end{table}
+%\end{landscape}
 
 
-The following scores were defined in a more complex way.
-
-\subsection{Military Isolation}
-%Alliances with \gls{NNWS} were assigned a score between 0 and 3, while alliances with \gls{NWS} were assigned a score betwen 5 and 7. These two scores were then summed for the final factor score.
-
-
-\begin{tabular}{|c|c|c|}
-  \hline
-   \multicolumn{2}{|c|}{Head 1} & Head 2 \\
-  \hline
-   a & b & c \\
-  \hline
-   a & b & c \\
-  \hline
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Nuc. Weapon Status} & \textbf{Allies}  & \textbf{Neutral}  & \textbf{Enemies} \\
+\hline
+NNWS - NNWS     & 2 & 2 & 6 \\
+NNWS - Pursue   & 3 & 4 & 8 \\
+NNWS - NWS      & 1 & 4 & 7 \\
+Pursue - Pursue & 4 & 5 & 9 \\
+Pursue - NWS    & 3 & 6 & 10 \\
+NWS - NWS       & 1 & 3 & 5 \\
+\hline
 \end{tabular}
- 
+\caption{\TODO{caption}}
+\label{tab:conflict}
+\end{table}
+%\end{landscape}
