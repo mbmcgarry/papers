@@ -1,9 +1,9 @@
 \section{Factors That Correlate to Pursuit of Nuclear Weapons}
 \label{s_factors}
 
-Social science literature has suggested that a variety of political and technical factors that may motivate a state to pursue nuclear weapons\cite{bell_questioning_2013, singh_correlates_2004, montgomery_perils_2009, li_model-based_2010, hymans_achieving_2012}. Political factors include: degree to which governing structure is authoritarian versus democratic, level of military spending, degree to which state is isolated militarily, and level of conflict with other states. Technical factors include: degree to which the state's scientific expertise is integrated into the international community, nuclear reactor experience, indigenous reserves of natural uraniaum, and the ability to enrich uranium.
+Social science literature has suggested a variety of political and technical factors that may motivate a state to pursue nuclear weapons\cite{bell_questioning_2013, singh_correlates_2004, montgomery_perils_2009, li_model-based_2010, hymans_achieving_2012}. Political factors include: degree to which governing structure is authoritarian versus democratic, level of military spending, degree to which state is isolated militarily, and level of conflict with other states. Technical factors include: degree to which the state's scientific expertise is integrated into the international community, nuclear reactor experience, indigenous reserves of natural uraniaum, and the ability to enrich uranium.
 
-We have compiled a database of information that quantifies each of these eight factors for states at important historical points, publically available on github\footnote{https://github.com/CNERG/historical\_prolif/blob/master/clean\_raw\_data.csv}, along with documentation on source data and assumptions\cite{hist_prolif}. The set includes 43 unique states that have historically had either nuclear energy or weapons technology.  The 24 states that have never pursued weapons have data compiled for 2015. The 19 states that have pursued weapons at some point in the past have data for the year in which they pursued as well as the year in which they acquired a weapon, if applicable. Pursuit and acquisition dates are coded from \emph{Singh and Way}. The pursuit date is defined as the first year in which a significant decision to pursue nuclear weapons was made such as a political decision by cabinet-level officials, movement toward weaponization, or development of single-use, dedicated technology.  Acquire date indicates the year in which either the first explosion of a nuclear device occurred or the complete assembly of a weapon since not all countries tested their nuclear weapons.
+We have compiled a database of information that quantifies each of these eight factors for states at important historical points, publically available on Github,\footnote{https://github.com/CNERG/historical\_prolif} along with documentation on source data and assumptions\cite{hist_prolif}. The set includes 43 unique states that have historically had some level of nuclear energy or weapons technology.  The 24 states that have never pursued weapons have data compiled for 2015. The 19 states that have pursued weapons at some point in the past have data for the year in which they pursued as well as the year in which they acquired a weapon, if applicable. Pursuit and acquisition dates are coded from \emph{Singh and Way}\cite{singh_correlates_2004}. The pursuit date is defined as the first year in which a significant decision to pursue nuclear weapons was made, such as a political decision by cabinet-level officials, movement toward weaponization, or development of single-use, dedicated technology.  Acquisition date indicates the year of first explosion of a nuclear device or when a weapon was first assembled, since not all countries tested their nuclear weapons.
 
 \begin{table}
 \centering
@@ -29,17 +29,17 @@ Nuclear Reactors           &  IAEA Power Reactor Database \cite{power_react}\\
 
                          & IAEA Research Reactor Database \cite{research_react}\\
 \hline
-Scientific Network     & Authors' Expert Opinion\footnote{Considers GDP, opportunities for scientists to study abroad, nuclear infrastructure, technical human capital} \\
+Scientific Network     & Authors' Expert Opinion \\
 \hline
 Uranium Reserves  &    OECD Uranium: Resources, Production and Demand \cite{noauthor_uranium_2014} \\
 \hline
 \end{tabular}
-\caption{Source data for each factor contributing to pursuit of nuclear weapons addressed in this paper.}
+\caption{Source data for each factor contributing to pursuit of nuclear weapons addressed in this paper. Scientific network assessment considers GDP, opportunities for scientists to study abroad, nuclear infrastructure, technical human capital.}
 \label{tab:factor_sources}
 \end{table}
 
 \subsection{Pursuit Score}\label{s_pe}
-The source used to define each factor has been taken from social science literature and is listed in Table \ref{tab:factor_sources} The raw data for each attribute has been normalized on a 1-10 scale so that all factors can be compared directly, as described in Table \ref{tab:factor_conversions}. Conflict is shown separately in Table \ref{tab:conflict}. Conflict has been defined for a given state by using the \emph{Uppsala database} to identify up to three significant state-pair relationships based on the state's conflicts during that year (the dataset was limited to three as a starting point, but could be further expanded).   Each of these relationships is coded as enemy, neutral, or ally.  Each of the two states in the pair is also identified as being a \gls{NNWS}, known to be pursuing weapons, or a \gls{NWS}.  The combination of weapons status and relationship status is combined to provide a conflict score for each pair. The net conflict factor is the average of all the state's paired conflict scores. We consider that the pursuit phase is the most destabilizing, and have incorporated considerations such as nuclear umbrellas \TODO{cite},  preventative war, increased low-level conflict between weapons states \cite{geller_nuclear_1990, fuhrmann_targeting_2010, bell_questioning_2013-1}.
+The source used to define each factor has been taken from social science literature and is listed in Table \ref{tab:factor_sources}. The raw data for each attribute has been normalized on a 1-10 scale so that all factors can be compared directly, as described in Table \ref{tab:factor_conversions}. Conflict is shown separately in Table \ref{tab:conflict}. Conflict has been defined for a given state by using the \emph{Uppsala database} to identify up to three significant state-pair relationships based on the state's conflicts during that year (the dataset was limited to three as a starting point, but could be further expanded)\cite{conflict_ref}.   Each of these relationships is coded as enemy, neutral, or ally.  Each of the two states in the pair is also identified as being a \gls{NNWS}, pursuing weapons, or a \gls{NWS}.  The relationship status and the weapons status of each pair are combined to provide a conflict score for the pair. The net conflict factor is then the average of all the state's paired conflict scores. We consider the pursuit phase as the most destabilizing, and have incorporated considerations such as preventative war by nuclear states, consequences of a nuclear umbrella, and increased low-level conflict between weapons states \cite{geller_nuclear_1990, fuhrmann_targeting_2010, bell_questioning_2013-1}.
 
 %\begin{landscape}
 \begin{table}
@@ -49,7 +49,7 @@ The source used to define each factor has been taken from social science literat
 \textbf{Factor}      & \textbf{Auth}          & \textbf{Enrich/}      & \multicolumn{2}{c|}{\textbf{Military Iso.}}          & \textbf{Mil. Spend} &  \textbf{Reactors}  & \textbf{Sci.} & \textbf{Uran.} \\
 \textbf{Score}  &                        &  \textbf{Repro.}   & \multicolumn{2}{c|}{$10 - (A_{NNWS}+A_{NWS})$}  & \textbf{(\%GDP)}    &   (Power+Research) & \textbf{Net.} &  \textbf{Res} \\
 \cline{4-5}
- (FS)           &                         &                       &  NNWS                 & NWS               &                    & $10 - R_{all}$&               &              \\
+ ($s_{f}$)           &                         &                       &  NNWS                 & NWS               &                    & $10 - R_{all}$&               &              \\
 
 
 \hline
@@ -67,7 +67,7 @@ The source used to define each factor has been taken from social science literat
 
 \hline
 \end{tabular}
-\caption{Conversion table from raw data to final factor score (FS). Square brackets are inclusive, parentheses are exclusive, such that [1,2) indicates $1<=x<2$. Reactors and military alliances (used to define military isolation) are both anti-correlated to pursuit so the final factor score for these factors is 10 minus the value shown in the table. Conflict factor is defined separately in table \ref{tab:conflict}. }
+\caption{Conversion from raw data to final factor score ($s_{f}$). Square brackets are inclusive, parentheses are exclusive, such that [1,2) indicates $1<=x<2$. Reactors and military alliances (used to define military isolation) are both anti-correlated to pursuit so those factor scores are 10 minus the value shown in the table. Conflict factor is defined separately in Table \ref{tab:conflict}. }
 \label{tab:factor_conversions}
 \end{table}
 %\end{landscape}
@@ -75,7 +75,7 @@ The source used to define each factor has been taken from social science literat
 
 \begin{table}
 \centering
-\begin{tabular}{||c|c|c|c|}
+\begin{tabular}{|c||c|c|c|}
 \hline
 \textbf{Nuc. Weapon Status} & \textbf{Allies}  & \textbf{Neutral}  & \textbf{Enemies} \\
 \hline
@@ -93,22 +93,21 @@ Pursue - NWS    & 3 & 6 & 10 \\
 NWS - NWS       & 1 & 3 & 5 \\
 \hline
 \end{tabular}
-\caption{Conflict score assignments are based on weapons status and relationship of pair states. Weapon status may be \gls{NNWS}, pursuing weapons, or \gls{NWS}. Relationship status is assumed to be symmetric and  may be positive Allies, neutral, or enemies.}
+\caption{Conflict score assignments are based on weapons status and relationship between pair states. Weapon status may be \gls{NNWS}, pursuing weapons, or \gls{NWS}. Relationship status is assumed to be symmetric and  may be positive allies, neutral, or enemies.}
 \label{tab:conflict}
 \end{table}
 
-Once every state had been assigned a 0-10 score for each factor, a correlation
+Once every state has been assigned a 0-10 score for each factor (fs), a correlation
 analysis was applied to the derived factor scores to quantify the degree to
 which each individual factor is correlated to the decision of whether or not to
-pursue weapons. The resulting weight for each factor is derived from the Pearson correlation coefficient. The bivariate correlation between the factor and the score and can be determined using the equation \ref{eqn:correlation}:
+pursue weapons. The resulting weight for each factor is derived from the Pearson correlation coefficient. The bivariate correlation ($w_{f}$) between the factor and the score is:
 \begin{equation}
     \label{eqn:correlation}
     w_{f} = \frac{\sum_{i=0}^{N} (f_{i} - \bar{f}) (s_{i} - \bar{s})}
                  {\sqrt{\sum_{i=0}^{N}\left(f_{i} - \bar{f}\right)}
                  \sqrt{\sum_{i=0}^{N}\left(s_{i} - \bar{s}\right)}},
 \end{equation}
-$N$ corresponds to the number of states, $f_{i}$ and $s_{i}$ to the factor and the score of a given state $i$, respectively,  and $\bar{f}$ and $\bar{s}$ to
-the mean factor and the mean score over all the states.  The correlation coefficients are then normalized so that the final pursuit score for a state can be defined a weighted linear combination of its different factors. The normalized weights of the 8 factors are shown in Table \ref{tab:factor_weights}. 
+where $N$ corresponds to the number of states, $f_{i}$ and $s_{i}$ to the individual factor and the total score of a given state $i$, respectively,  and $\bar{f}$ and $\bar{s}$ to the mean factor and the mean score averaged over all states.  The correlation coefficients are then normalized so that the final pursuit score for a state can be defined a weighted linear combination of its factors. The normalized weights of the 8 factors are listed in Table \ref{tab:factor_weights}. 
 
 \begin{table}
 \centering
@@ -126,11 +125,11 @@ Scientific Network & 0.05 \\
 Uranium Reserves &  0.0 \\
 \hline
 \end{tabular}
-\caption{Relative weighting of each factor toward pursuit decision as determined by correlation analysis of historical data. Note reactor technology is anti-correlated and uranium reserves are uncorrelated.}
+\caption{Relative weighting of each factor toward pursuit decision as determined by correlation analysis of historical data. Note reactor technology is anti-correlated and uranium reserve factor is uncorrelated.}
 \label{tab:factor_weights}
 \end{table}
 
-Pursuit scores can range between 0 and 10.  Confidence in the weights was gained by applying the weighted equation to the historical data and examining degree to which scores accurately matched historical pursuit decisions.  Historically based scores are shown in Table \ref{tab:state_scores} for the year in which each state explored or pursued a weapon, or 2015 for states that never developed weapons programs. The historical scores are ranked such that states that actually pursued weapons have the highest scores (red).
+Final pursuit scores can range between 0 and 10.  Confidence in the weights was confirmed by applying the weighted equation to the historical data and examining the degree to which scores accurately match historical pursuit decisions.  Historically-based scores are shown in Table \ref{tab:state_scores} for the year in which each state explored or pursued a weapon, or 2015 for states that have never developed weapons programs. The historical scores are consistent with the expectation that states that actually pursued weapons should have the highest scores (red), on average. It is important to note that this table shows the correlation between scores and pursuit, but does not imply causation. No conclusions can or should be drawn about the future actions of any \gls{NNWS} that had a high score in 2015.
 
 \begin{table}
   \centering
@@ -197,11 +196,11 @@ Belgium & 2015 & 1.0 \\
 \hline
 \end{tabular}
 \end{minipage}\hfill
-\caption{Historical scores assigned to states based on their factor values at the designated year. Weighting accurately gives high scores to states that explored, pursued or acquired nuclear weapons (bold red), and low scores to those that never investigated a nuclear weapons program (black).}
+\caption{Historical scores calculated for states based on their factor values at the designated year. The factor weighting accurately results in high scores for states that explored, pursued or acquired nuclear weapons (bold red), and lower scores to those that never investigated a nuclear weapons program (black), on average.}
 \label{tab:state_scores}
 \end{table}
 
 
-Two major insights arise from this analysis. First, a state's reactor technology is anti-correlated to pursuing a nuclear weapon.  Denoted in Table \ref{tab:factor_weights} with a minus sign for illustrative purposes, in practice the scale for this factor was inverted such that maximum reactors led to a minimum reactor score, and then the absolute value of the weight (18\%) was used.  Second, indigenous uranium reserves were uncorrelated to weapons programs. These two results were not predicted by the social science literature.
+Two notable insights arise from this analysis. First, a state's reactor technology is anti-correlated to pursuing a nuclear weapon.  Denoted in Table \ref{tab:factor_weights} with a minus sign for illustrative purposes, in practice the conversion for this factor has been inverted such that maximum number of reactors leads to a minimum reactor score, and so that the absolute value of the weight (18\%) can used.  Second, indigenous uranium reserves were uncorrelated to weapons programs. These two results were not predicted by the social science literature\cite{li_model-based_2010}.
 
 
