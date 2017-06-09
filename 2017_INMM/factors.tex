@@ -3,7 +3,7 @@
 
 Social science literature has suggested that a variety of political and technical factors that may motivate a state to pursue nuclear weapons\cite{bell_questioning_2013, singh_correlates_2004, montgomery_perils_2009, li_model-based_2010}. Political factors include: degree to which governing structure is authoritarian versus democratic, level of military spending, degree to which state is isolated militarily, and level of conflict with other states. Technical factors include: degree to which the state's scientific expertise is integrated into the international community\cite{hymans_achieving_2012}, nuclear reactor experience, indigenous reserves of natural uraniaum, and the ability to enrich uranium.
 
-We have compiled a database of information that quantifies each of these eight factors for states at important historical points, publically available on github\footnote{https://github.com/CNERG/historical\_prolif/blob/master/clean\_raw\_data.csv}, along with documentation on source data and assumptions\footnote{https://github.com/CNERG/historical\_prolif/blob/master/README.rst}.  The set includes 42 unique states that have historically had either nuclear energy or weapons technology.  The 24 states that have never pursued weapons have data compiled for 2015. The 19 states that have pursued weapons at some point in the past have data for the year in which they pursued as well as the year in which they acquired a weapon, if applicable. Pursuit and acquisition dates are coded from \emph{Singh and Way}. The pursuit date as defined as the first year in which a significant decision to pursue nuclear weapons was made such as a political decision by cabinet-level officials, movement toward weaponization, or development of single-use, dedicated technology.  Acquire date indicates the year in which either the first explosion of a nuclear device occurred or the complete assembly of a weapon since not all countries tested their nuclear weapons.
+We have compiled a database of information that quantifies each of these eight factors for states at important historical points, publically available on github\footnote{https://github.com/CNERG/historical\_prolif/blob/master/clean\_raw\_data.csv}\TODO{figshare with DOI}, along with documentation on source data and assumptions\footnote{https://github.com/CNERG/historical\_prolif/blob/master/README.rst}.  The set includes 42 unique states that have historically had either nuclear energy or weapons technology.  The 24 states that have never pursued weapons have data compiled for 2015. The 19 states that have pursued weapons at some point in the past have data for the year in which they pursued as well as the year in which they acquired a weapon, if applicable. Pursuit and acquisition dates are coded from \emph{Singh and Way}. The pursuit date is defined as the first year in which a significant decision to pursue nuclear weapons was made such as a political decision by cabinet-level officials, movement toward weaponization, or development of single-use, dedicated technology.  Acquire date indicates the year in which either the first explosion of a nuclear device occurred or the complete assembly of a weapon since not all countries tested their nuclear weapons.
 
 \begin{table}
 \centering
@@ -40,6 +40,8 @@ Uranium Reserves  &    OECD Uranium: Resources, Production and Demand \cite{noau
 
 \subsection{Pursuit Score}\label{s_pe}
 The source used to define each factor has been taken from social science literature and is listed in Table \ref{tab:factor_sources} The raw data for each attribute has been normalized on a 1-10 scale so that all factors can be compared directly, as described in Table \ref{tab:factor_conversions}. Conflict is shown separately in Table \ref{tab:conflict}. Conflict has been defined for a given state by identifying three significant state-pair relationships.  Each of these relationships is coded as enemy, neutral, or ally.  Each of the two states in the pair is also identified as being a non-weapons state, known to be pursuing weapons, or a weapons-state.  The combination of weapons status and relationship status is combined to provide a conflict score for each pair. The net conflict factor is the average of the state's three conflict scores. We consider that the pursuit phase is the most destabilizing, and have incorporated considerations such as nuclear umbrellas \TODO{cite},  preventative war, increased low-level conflict between weapons states \cite{geller_nuclear_1990, fuhrmann_targeting_2010, bell_questioning_2013-1}.
+\TODO{I don't get the notion of ``three'' here}
+
 
 %\begin{landscape}
 \begin{table}
@@ -99,7 +101,7 @@ NWS - NWS       & 1 & 3 & 5 \\
 
 Once every state had been assigned a 0-10 score for each factor, a correlation
 analysis was applied to the derived factor scores to quantify the degree to
-which each individual factor is correlated to the decision whether or not to
+which each individual factor is correlated to the decision of whether or not to
 pursue weapons. The resulting weight for each factor is derived from the Pearson correlation coefficient. The bivariate correlation between the factor and the score and can be determined using the equation \ref{eqn:correlation}:
 \begin{equation}
     \label{eqn:correlation}
@@ -126,7 +128,7 @@ Scientific Network & 0.05 \\
 Uranium Reserves &  0.0 \\
 \hline
 \end{tabular}
-\caption{Relative weighting of each factor toward pursuit decision as determined by correlation analysis of historical data. Note reactor technology is anti-correlated.}
+\caption{Relative weighting of each factor toward pursuit decision as determined by correlation analysis of historical data. Note reactor technology is anti-correlated and uranium reserves are uncorrelated.}
 \label{tab:factor_weights}
 \end{table}
 
@@ -198,11 +200,11 @@ Belgium & 2015 & 1.0 \\
 \hline
 \end{tabular}
 \end{minipage}\hfill
-\caption{Historical scores assigned to states based on their factor values at the designated year. Weighting accurately gives high scores to states that acquired (red), pursued or explored (orange), and low scores to those that never investigated a nuclear weapons program (black).}
+\caption{Historical scores assigned to states based on their factor values at the designated year. Weighting accurately gives high scores to states that acquired (red), pursued or explored (orange), and low scores to those that never investigated a nuclear weapons program (black).} % color: do most readers access this electornically?  also - none are orange
 \label{tab:state_scores}
 \end{table}
 
 
-Two major insights arise from this analysis. Firstly, a state's reactor technology is anti-correlated to pursuing a nuclear weapon.  Denoted in Table \ref{tab:factor_weights} with a minus sign for illustrative purposes, in practice the factor scale was inverted such that maximum reactors led to a minimum reactor score, and then the absolute value of the weight (18\%) was used.  Secondly, indigenous uranium reserves were uncorrelated to weapons programs. These two results were not predicted by the social science literature.
+Two major insights arise from this analysis. First, a state's reactor technology is anti-correlated to pursuing a nuclear weapon.  Denoted in Table \ref{tab:factor_weights} with a minus sign for illustrative purposes, in practice the scale for this factor was inverted such that maximum reactors led to a minimum reactor score, and then the absolute value of the weight (18\%) was used.  Second, indigenous uranium reserves were uncorrelated to weapons programs. These two results were not predicted by the social science literature.
 
 
