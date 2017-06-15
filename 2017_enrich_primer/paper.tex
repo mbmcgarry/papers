@@ -1,0 +1,137 @@
+%\documentclass{proc}  % 2-column format
+\documentclass[12pt]{paper}
+%\documentclass{ntmanuscript}
+%\documentclass[review]{elsarticle}
+\usepackage{mathptmx} % Nearly Times New Roman
+\usepackage[acronym,toc]{glossaries}
+\include{acros}
+%\makeglossaries
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{color}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{booktabs} % nice rules for tables
+\usepackage{microtype} % if using PDF
+\usepackage{xspace}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{multicol,tabularx,capt-of}
+\usepackage{multirow}
+%\usepackage{ulem}
+\usepackage{pdflscape}
+% Page length commands go here in the preamble
+\setlength{\oddsidemargin}{-0.25in} % Left margin of 1 in + 0 in = 1 in
+\setlength{\textwidth}{7in}   % Right margin of 8.5 in - 1 in - 6.5 in = 1 in
+\setlength{\topmargin}{-.75in}  % Top margin of 2 in -0.75 in = 1 in
+\setlength{\textheight}{9.2in}  % Lower margin of 11 in - 9 in - 1 in = 1 in
+
+
+
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\definecolor{burgundy}{rgb}{0.5, 0.0, 0.13}
+\definecolor{burntorange}{rgb}{0.8, 0.33, 0.0}
+\definecolor{chromeyellow}{rgb}{1.0, 0.65, 0.0}
+\definecolor{darkred}{rgb}{0.55, 0.0, 0.0}
+
+\lstset{
+    %backgroundcolor=\color{lbcolor},
+    language={C++},
+    tabsize=4,
+    rulecolor=\color{black},
+    upquote=true,
+    aboveskip={1.5\baselineskip},
+    belowskip={1.5\baselineskip},
+    columns=fixed,
+    extendedchars=true,
+    breaklines=true,
+    prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=single,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    basicstyle=\scriptsize\ttfamily\color{green!40!black},
+    keywordstyle=\color[rgb]{0,0,1.0},
+    commentstyle=\color[rgb]{0.133,0.545,0.133},
+    stringstyle=\color[rgb]{0.627,0.126,0.941},
+    numberstyle=\color[rgb]{0,1,0},
+    identifierstyle=\color{black},
+    captionpos=t,
+}
+
+\newcommand{\code}[1]{\lstinline[basicstyle=\ttfamily\color{green!40!black}]|#1|}
+\newcommand{\units}[1] {\:\text{#1}}%
+\newcommand{\SN}{S$_N$}
+\newcommand{\cyclus}{\textsc{Cyclus}\xspace}
+\newcommand{\Cyclus}{\cyclus}
+\newcommand{\citeme}{\textcolor{red}{CITE}\xspace}
+\newcommand{\TODO}[1] {{\color{red}\textbf{TODO: #1}}}%
+
+\newcommand{\comment}[1]{{\color{green}\textbf{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+%\begin{frontmatter}
+\title{Fundamentals of Centrifuge Enrichment: A Technical Primer}
+
+% Authors. Separated by commas
+\input{authors}
+\date{}
+% Institutes of the authors
+\input{institutions}
+% Information concerning the person submitting the manuscript
+%\submitter{Meghan B. McGarry}
+%\submitteraddress{1500 Engineering Drive, Madison, WI, USA}
+%\submitteremail{mbmcgarry@wisc.edu}
+
+% No more than three keywords, though each can be a phrase
+%\keywords{fuel cycle, simulatiom, non-proliferation}
+\maketitle
+
+% I. Motivation
+% x   -  Identify Factors that motivate
+% x  II. Benchmark model against historical data:
+% x A. Develop historical database
+% x   - What sources?
+% x   - What model to convert to 10pt scale?
+% x        - Conflict
+% x B. Determine relative weighting of factors
+% x   - Calculate values for historical database
+% x   - PCA to determine relative weights
+% ** C. Table of State Score Results
+% III. Develop forward model 
+%   - From score to a likelihood, using historical data
+% IV. Limitations of model
+%   - small dataset
+%   - threshold value for proliferation
+%   - no good model for scientific network
+% V. Future work
+%   - Apply to case study (JCPOA?)
+% VI Appendix of factor conversions
+
+\begin{abstract}
+
+ 
+
+\end{abstract}
+
+
+%\end{frontmatter}
+
+
+\input{introduction}
+\input{centrifuge}
+\input{iran_program}
+\input{cascade}
+%\input{discussion}
+%\input{appendix}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{small}
+\bibliographystyle{ANSurl}
+\bibliography{../zotero_160516,../zotero_adds_160603,../manual_fixes,../websites_manual,../poli_sci_hoffman}  % NO SPACES BETWEEN BIB FILENAMES!
+\end{small}
+\end{document}

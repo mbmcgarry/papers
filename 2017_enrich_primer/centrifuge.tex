@@ -1,0 +1,91 @@
+\section{Centrifuge Design}
+\label{s_centrifuge}
+A gas centrifuge used for uranium enrichment is much like any other centrifuge. It uses the difference in weight between two isotopes of uranium, \gls{U235} and \gls{U238} to separate out the desired isotope, \gls{U235} by spinning it at high velocity. The lighter \gls{U235} collects at the top of the centrifuge while the heavier \gls{U238} sinks to the bottom.
+
+\iffalse
+\begin{figure}%[htbp!]
+%\begin{center}
+\includegraphics[scale=0.7]{./figs/centrifuge.png}
+%\end{center}
+\caption{A Nuclear Regulatory Commission Diagram of a Simple Gas Centrifuge}
+\label{fig:likely}
+\end{figure}
+\fi
+
+The type of centrifuge used in uranium enrichment is almost always the counter-current gas centrifuge, a drawing of which can be seen in Figure \ref{fig:centrifuge}. Although there are other types, such as the concurrent centrifuge and evaporative centrifuge, the counter-current centrifuge is the only type prominently used in enrichment operations in Iran and Pakistan. The counter-current centrifuge is both more efficient in terms the time it takes to separate uranium and in terms of the energy it uses to do so.
+
+A centrifuge is comprised of several constituent parts. The first thing the outside observer will notice is the large cylindrical case that houses the rest of the centrifuge. Next to draw the eye is the piping running between cases, one of which allows uranium hexafluoride to be fed into the machine as well as separate pipes for removing the product stream containing the more enriched uranium and the tails stream which contains the less enriched or depleted uranium. These pipes run through the case and into the rotor, a cylindrical tube closed on each end with cap pieces, where the separation of isotopes actually happens. Consequently, the rotor is the part which most concerns those working on non-proliferation. Its height, diameter, and the speed at which it can rotate are all important factors in calculating the \gls{SWU} of a centrifuge. 
+
+Inside the rotor, at the very center both vertically and horizontally, is the center post where uranium enters the machine\cite{Olander_1981} %\The Theory of Uranium Centrifuge Enrichment Olander, Donald. 17 March 1981. Progress in Nuclear Energy.
+At the top and bottom of the rotor are scoops which help remove separated gas from the centrifuge, depleted gas with a higher concentration of \gls{U238} from the bottom and enriched gas with a higher concentration of \gls{U235} at the top. The bottom scoop also contributes to the counter-current flow within the machine. Between the top scoop and the main chamber of the centrifuge is a device called a baffle which keeps the top scoop from interfering in the flow of the machine . Some centrifuges include a part called a bellows that connects rotor sections. This is not a bellows in the way one might imagine a medieval blacksmith using one, but a connector made of steel or carbon fiber that allows the rotor greater flexibility when being rotated at high speed.
+
+Centrifuges must be constructed with materials that are able to withstand both the high speed at which they are rotated and the corrosive effects of UF6. These materials include aluminum alloys, maraging steel, carbon fiber and other synthetics\cite{shin_sung} % Implications of Iran's Success in Developing Fourth-Generation Centrifuge Technology Shin Sung Tack. Online Series KINU
+. The typical progression in development for countries building their own centrifuges is to begin with aluminum, move to maraging steel and then to carbon fiber. There are several reasons for this. The first is that aluminum is cheaper and easier to obtain than either maraging steel or carbon fiber. This makes it better for a proof of concept centrifuge design and simpler to begin with if a state is concerned about export controls limiting their access to materials. One of the consistent barriers for Iran's nuclear program has been its inability to buy quality carbon fiber or maraging steel abroad due to international sanctions and not having the industry at home to manufacture them at a high enough quality. Aluminum is also easier to machine than either maraging steel or carbon fiber. According to the \gls{ISIS}, this has led to Iranian engineers using aluminum end caps on steel rotor tubes as a way to preserve the steel and carbon fiber they do have\cite{isis_webpage} %Iran's new centrifuge: What do we know about it? David Albright, Jacqueline Shire, Paul Brannan. April 13, 2010. Institute for Science and International Security..  
+
+\section{Centrifuge Equations}
+
+
+\begin{multline}
+  \label{eqn:raetz}
+  \delta U_{Raetz}(L,F,\theta,Z_{P})
+  =\frac{1}{2}F\theta (1-\theta)
+  \left ( \frac{\Delta M}{2RT}v_{a}^{2} \right )^{2}
+  \left ( \frac{r_{2}}{a} \right )^{4}
+  \left [1-\left ( \frac{r_{1}}{r_2} \right )^{2}
+  \right ] ^{2} \\
+* \left[
+  \left( \frac{1+L/F}{\theta} \right )
+  \left ( 1 - e^{-A_{p}(L,F,\theta)Z_{p}}\right )
+  + \left (\frac{L/F}{1-\theta}\right )
+  \left \{ 1-e^{-A_{W}(L,F,\theta)(Z - Z_{P})} \right \} 
+  \right]^{2}
+\end{multline}
+
+
+\begin{equation}
+  A_{P} = \left (
+  \frac{2 \pi D_{\rho}}{ln(r_{2}/r_{1})}
+  \right )
+  \left (
+  \frac{\theta/F}{(1+L/F)(1-\theta+L/F)}
+  \right )
+\end{equation}
+\begin{equation}
+  A_{W} = \left (
+  \frac{2 \pi D_{\rho}}{ln(r_{2}/r_{1})}
+  \right )
+  \left (
+  \frac{\theta/F}{(L/F)(1-\theta+L/F)}
+  \right )
+\end{equation}
+
+\begin{equation}
+  Z_{P} = \left (
+  \frac{(1-\theta)(1+L/F)}{1-\theta+L/F}
+  \right ) Z
+\end{equation}
+
+
+F = Feed flow in moles/second
+P = Product flow in moles/second
+$\theta$ =P/F  (cut)
+$\Delta$ M=Difference in molar mass between $U_{235}F_{6}$  and  $U_{238}F_{6}$
+R=universal gas constant
+T=Average temperature of the gas
+$v_{a}^{2}$=peripheral velocity of the rotor in meters per second
+$r_{2}$=radius at which product is extracted
+a=radius of rotor
+$r_{1}$=radius at which waste is extracted
+L=countercurrent flow rate
+$D_{\rho}$ = gas diffusion constant
+Z = rotor height
+
+\begin{equation}
+  \label{eqn:sep_fac}
+\alpha = \sqrt{\frac{2\delta U}{\theta/(1-\theta)L}} + 1
+\end{equation}
+
+One important note for the reader: Equation \ref{eqn:raetz} is typically discussed in the literature as being in terms of molar fraction or moles of \gls{UF6} per second. Equation \ref{eqn:sep_fac}, and most of the equations in the cascade section, are in terms of atom fraction or kilograms of uranium per year. This is a discrepancy found both in the technical literature and in the non-proliferation policy world. For example, Iran often reports its \gls{SWU} capacity in terms of enriched kilograms of \gls{UF6}. In the west when Iran’s enrichment limits are in terms of kilograms of enriched uranium – because that’s the mass that counts against the limits in the \gls{JCPOA} and the 90kg necessary to build a nuclear weapon.
+
+
+
