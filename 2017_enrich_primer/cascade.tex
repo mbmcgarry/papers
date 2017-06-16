@@ -1,2 +1,44 @@
-\section{Cascade Design}
+\section{Cascades}
 \label{s_cascade}
+A single centrifuge is limited in both the amount of uranium it can enrich and the level to which it can enrich that uranium by its separation coefficient. This limit means that an individual centrifuge cannot develop enough fuel for either a power plant or a bomb. So, in order to enrich uranium at a useful scale centrifuges are set up in cascades. A cascade is made up of groups of centrifuges split into stages that are organized by level of uranium enrichment; each stage is a set of identical centrifuges that enrich fuel from the previous stage. The cascades in each stage are connected in parallel, while the connections between stages are in series . This means that gas in centrifuges in the same stage 
+A picture of a cascade would show equal sized rows and columns of centrifuges with uniform spacing between them like in Figure \ref{fig:cascade_hall}. One might think that each row or column constitutes a stage, but this is not the case. Stages are determined by the piping between cascades. A cascade can be imagined, roughly, as a rhombus (see Figure \ref{fig:ideal_cascade}). Is it broader in the middle at stage 0, where uranium hexafluoride is fed into the apparatus. A cascade narrows in each direction as stages become smaller as material becomes more and more concentrated.  
+
+\iffalse
+\begin{figure}%[htbp!]
+%\begin{center}
+\includegraphics[scale=0.7]{./figs/ideal_cascade.png}
+%\end{center}
+\caption{Diagram of an Ideal Cascade by Avery and Davies \TODO{Cite in caption?}}
+\label{fig:ideal_cascade}
+\end{figure}
+\fi
+
+\iffalse
+\begin{figure}%[htbp!]
+%\begin{center}
+\includegraphics[scale=0.7]{./figs/cascade_hall.png}
+%\end{center}
+\caption{A US Department of Energy Photo of a Gas Centrifuge Cascade \TODO{Figure Copyrights?}}
+\label{fig:cascade_hall}
+\end{figure}
+\fi
+
+There is a healthy body of research on the ideal cascade design and the trade-offs between types of cascades. Most of this focus is theoretical however, according to DG Avery and E Davies “An ideal cascade is not completely achievable in practice, because the minimum number of elements to achieve the separation objective is usually non-integral in most stages of the cascade. ”\cite{avery_1973} % 	 Uranium Enrichment by Gas Centrifuge. D G Avery, E Davies. 1973. London, UK.
+As a result “practical cascades” are an ideal cascade which is followed as closely as can be done using integral numbers of centrifuges.
+
+\section{Designing a Cascade}
+To design a practical cascade, one would take the ratio of total SWU required of the cascade to enrich the target amount of uranium over the total SWU of the centrifuges used in the cascade as seen in equation five. This outputs the number of centrifuges required by the cascade.
+
+\TODO{EQN MAchines per cascade (?)}
+
+The number of stages in a cascade is calculated using these equations for total enrichment stages (Equation 6) and stripping stages (Equation 7).
+
+\TODO{Equation 6: Number of Enrichment, Stripping Stages}
+
+
+When an optimal cascade is defined as having the fewest number of stages to achieve the desired output, then the cut, or splitting ratio is ½. This number, with information about the flow rate for feed, 
+
+product and tails to determine the size of each stage. Each stage size must be calculated chronologically because the flow rates in stage n are dependent on the flow rates in stages n-1, n+1 and n
+
+
+For more information about ideal cascades look to the chapter Cascade Theory in Topics in Applied Physics: Uranium Enrichment \cite{Cascade_?}.% Topics in Applied Physics: Uranium Enrichment. S Villani. New York. 1979.
