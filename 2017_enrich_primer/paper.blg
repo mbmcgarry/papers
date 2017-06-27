@@ -11,6 +11,8 @@ Warning--I didn't find a database entry for "ucs_2009"
 Warning--I didn't find a database entry for "Olander_1981"
 Warning--I didn't find a database entry for "shin_sung"
 Warning--I didn't find a database entry for "isis_webpage"
+Warning--I didn't find a database entry for "Raetz"
+Warning--I didn't find a database entry for "glaser_2009"
 Warning--I didn't find a database entry for "maccalman_2016"
 Warning--I didn't find a database entry for "isis_website"
 Warning--I didn't find a database entry for "glaser_?"
@@ -20,7 +22,7 @@ Warning--I didn't find a database entry for "avery_1973"
 Warning--I didn't find a database entry for "Cascade_?"
 You've used 0 entries,
             2085 wiz_defined-function locations,
-            473 strings with 3200 characters,
+            476 strings with 3221 characters,
 and the built_in function-call counts, 18 in all, are:
 = -- 0
 > -- 0
@@ -59,4 +61,4 @@ warning$ -- 0
 while$ -- 0
 width$ -- 0
 write$ -- 2
-(There were 11 warnings)
+(There were 13 warnings)

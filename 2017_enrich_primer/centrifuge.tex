@@ -23,7 +23,34 @@ Centrifuges must be constructed with materials that are able to withstand both t
 . The typical progression in development for countries building their own centrifuges is to begin with aluminum, move to maraging steel and then to carbon fiber. There are several reasons for this. The first is that aluminum is cheaper and easier to obtain than either maraging steel or carbon fiber. This makes it better for a proof of concept centrifuge design and simpler to begin with if a state is concerned about export controls limiting their access to materials. One of the consistent barriers for Iran's nuclear program has been its inability to buy quality carbon fiber or maraging steel abroad due to international sanctions and not having the industry at home to manufacture them at a high enough quality. Aluminum is also easier to machine than either maraging steel or carbon fiber. According to the \gls{ISIS}, this has led to Iranian engineers using aluminum end caps on steel rotor tubes as a way to preserve the steel and carbon fiber they do have\cite{isis_webpage} %Iran's new centrifuge: What do we know about it? David Albright, Jacqueline Shire, Paul Brannan. April 13, 2010. Institute for Science and International Security..  
 
 \section{Centrifuge Equations}
+The performance of a centrifuge is determined by its fixed parameters: physical dimensions, location of the feed (in $\hat{z}$) and withdrawl (in $\hat{r}$) pipes, and internal counter-current flow (determined by baffle/scoop placement). Operational engineering constraints may be tuned within some limits to be optimized for either separating efficiency or throughput: flow rate, cut (ration of product flow to feed flow), operating temperature, and velocity at the outer radius $a$. The variables used in Equations \ref{eqn:dirac}-\ref{eqn:??} are defined (with typical units):
+\\
+F = Feed flow (mole/sec) \\
+P = Product flow in (mole/sec)\\
+$\theta$ = P/F (cut)\\
+M = molar mass of process gas (0.352 kg/mol for low enrichment levels)
+$\Delta$ M = Difference in molar mass between $U_{235}F_{6}$ and $U_{238}F_{6}$\\
+R = universal gas constant\\
+T = Average temperature of the gas (K)\\
+a = outer radius of rotor (m) \\
+$v_{a}^{2}$ = peripheral velocity of the rotor (m/s)\\
+$r_{2}$ = radius at which product is extracted ($\sim$0.96a - 0.99a)\\
+$r_{1}$ = radius at which waste is extracted\TODO{Not certain about this defn} \\
+L = countercurrent flow rate (mole/sec) \\
+$D_{\rho} \simeq 2.2x10^{-5}$ gas self-diffusion coefficient (kg/(m s)) \\
+Z = rotor height (m)  \\
+$Z_{p}$ = rectifier length (height at which feed is introduced) (m) \\
+x = pressure ratio (for fast machines is $\sim$1000:1) \TODO{pressure ratio of what? r2 to r1?}
+\\
 
+Using energy balance of an ideal gas, Dirac defined a theoretical ideal separation potential $\delta U_{Dirac}$: \TODO{This is eqn 6  from Glaser SGS. How to cite properly? Is it plagarism to republish equations?}
+
+\begin{equation}
+  \label{eqn:dirac}
+  \delta U_{Dirac} = D\rho \left ( \frac{\Delta M v_{a}^{2}}{2RT} \right )^{2} \frac{\pi Z}{2}
+  \end{equation}
+
+Raetz derived a more accurate equation for $\delta U$ by solving the continuity equation for a two-fluid model with a two-shell profile, assuming: isothermal conditions, equilibrium concentration flow, and zero net radial drift velocity\cite{Raetz}.  The Raetz equation (Equation \ref{eqn:raetz}) incorporates the effects of radial pressure, axial current, and radial and axial back-diffusion (axial back-diffusion can be ignored for \emph{Z >> a}. A more detailed explanation of the Raetz equation can be found in Glaser (2009), including explanations of the approximations used above and tradeoff considerations for operational parameters such as $x$, $r_{1}/r{2}$, and $T$ \cite{glaser_2009}.  Once the centrifuge operation has been optimized based on engineering constraints, the separation potential defined by Raetz equation is a function of four adjustable parameters: counter-current internal flow, feed rate, cut, and rectifier height:
 
 \begin{multline}
   \label{eqn:raetz}
@@ -33,14 +60,13 @@ Centrifuges must be constructed with materials that are able to withstand both t
   \left ( \frac{r_{2}}{a} \right )^{4}
   \left [1-\left ( \frac{r_{1}}{r_2} \right )^{2}
   \right ] ^{2} \\
-* \left[
+\times \left[
   \left( \frac{1+L/F}{\theta} \right )
   \left ( 1 - e^{-A_{p}(L,F,\theta)Z_{p}}\right )
   + \left (\frac{L/F}{1-\theta}\right )
   \left \{ 1-e^{-A_{W}(L,F,\theta)(Z - Z_{P})} \right \} 
   \right]^{2}
 \end{multline}
-
 
 \begin{equation}
   A_{P} = \left (
@@ -55,37 +81,50 @@ Centrifuges must be constructed with materials that are able to withstand both t
   \frac{2 \pi D_{\rho}}{ln(r_{2}/r_{1})}
   \right )
   \left (
-  \frac{\theta/F}{(L/F)(1-\theta+L/F)}
+  \frac{(1-\theta )/F}{(L/F)(1-\theta+L/F)}
   \right )
 \end{equation}
 
+Optimum values for $Z_{P}^{*}$ and $r_{1}/r_{2}$ are determined by:
+
 \begin{equation}
-  Z_{P} = \left (
+  Z_{P}^{*} = \left (
   \frac{(1-\theta)(1+L/F)}{1-\theta+L/F}
   \right ) Z
 \end{equation}
 
+\begin{equation}
+\frac{r_{1}}{r_{2}} \simeq \sqrt{1 -\frac{2RT}{M v^{2}_{a}} (ln x)}
+\end{equation}
 
-F = Feed flow in moles/second
-P = Product flow in moles/second
-$\theta$ =P/F  (cut)
-$\Delta$ M=Difference in molar mass between $U_{235}F_{6}$  and  $U_{238}F_{6}$
-R=universal gas constant
-T=Average temperature of the gas
-$v_{a}^{2}$=peripheral velocity of the rotor in meters per second
-$r_{2}$=radius at which product is extracted
-a=radius of rotor
-$r_{1}$=radius at which waste is extracted
-L=countercurrent flow rate
-$D_{\rho}$ = gas diffusion constant
-Z = rotor height
+\TODO{Is efficiency in the table defined as $delta U_{Raetz}/ \delta U_{Dirac}$?}
+
+Given the equations above, as well as a feed assay ($N_{F}$), the enrichment factor ($\alpha $), product assay ($N_{P}$) and waste assay {$N_{W}$) are:
 
 \begin{equation}
   \label{eqn:sep_fac}
-\alpha = \sqrt{\frac{2\delta U}{\theta/(1-\theta)L}} + 1
+\alpha = 1+ \sqrt{\frac{2\delta U (1 - \theta)}{\theta F}}
 \end{equation}
 
-One important note for the reader: Equation \ref{eqn:raetz} is typically discussed in the literature as being in terms of molar fraction or moles of \gls{UF6} per second. Equation \ref{eqn:sep_fac}, and most of the equations in the cascade section, are in terms of atom fraction or kilograms of uranium per year. This is a discrepancy found both in the technical literature and in the non-proliferation policy world. For example, Iran often reports its \gls{SWU} capacity in terms of enriched kilograms of \gls{UF6}. In the west when Iran’s enrichment limits are in terms of kilograms of enriched uranium – because that’s the mass that counts against the limits in the \gls{JCPOA} and the 90kg necessary to build a nuclear weapon.
+\begin{equation}
+  \label{eqn:product_assay}
+  N_{P} = \frac{1}{\frac{1-N_{F}}{\alpha N_{F}} + 1}
+  \end{equation}
+
+\begin{equation}
+\label{eqn:waste_assay}
+N_{W} = \frac{
+  \frac{N_{f}}{\alpha (1-N_{F})}}
+       {1+
+         \frac{N_{F}}{\alpha (1-N_{F})}}
+\end{equation}
+
+One important note for the reader: Equation \ref{eqn:raetz} is typically discussed in the literature as being in terms of molar fraction or moles of \gls{UF6} per second. Equation \ref{eqn:sep_fac}, and most of the equations in the cascade section, are in terms of atom fraction or kilograms of uranium per year. This is a discrepancy found both in the technical literature and in the non-proliferation policy world. For example, Iran often reports its \gls{SWU} capacity in terms of enriched kilograms of \gls{UF6}. In the west when Iran’s enrichment limits are in terms of kilograms of enriched uranium – because that’s the mass that counts against the limits in the \gls{JCPOA} and the 90kg necessary to build a nuclear weapon. Therefore, when comparing reported flow rates to theoretical flow rates, remember to convert between molecular mass and atomic mass:
+
+\begin{equation}
+  \label{eqn:convert}
+  \delta U_{atom} = \delta U_{UF_{6}} \left ( \frac{m_{atom}}{m_{UF_6}} \right )
+  \end{equation}
 
 
 

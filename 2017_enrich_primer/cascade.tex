@@ -27,7 +27,38 @@ There is a healthy body of research on the ideal cascade design and the trade-of
 As a result “practical cascades” are an ideal cascade which is followed as closely as can be done using integral numbers of centrifuges.
 
 \section{Designing a Cascade}
-To design a practical cascade, one would take the ratio of total SWU required of the cascade to enrich the target amount of uranium over the total SWU of the centrifuges used in the cascade as seen in equation five. This outputs the number of centrifuges required by the cascade.
+An ideal cascade can be designed from the known performance of the composite centrifuges. First, the number of stages is determined:
+
+\begin{equation}
+  \label{eqn:n_stages}
+
+\end{equation}
+
+
+Next the steady-state flow flows into each stage are calculated by solving a system of linear equations.
+
+\TODO{eqns for current stage, previous, next, example of linear eqn}
+
+Finally, layout the machines in each stage:
+
+\TODO{equation for machnes per stage}
+
+
+\TODO{To make these calculations, you will need to know WasteAssayByAlpha, ProductAssayByAlpha}
+
+\TODO{check python code to see if I missed anything}
+
+
+
+
+
+The total number of centrifuges needed to achieve a desired total cascade feed rate $F_{cascade}$:
+\begin{equation}
+  \label{eqn:n_mach}
+  \#_{machines} = \frac{\delta U_{cascade}}{\delta U_{machine}}
+  = 
+  \end{equation}
+
 
 \TODO{EQN MAchines per cascade (?)}
 
